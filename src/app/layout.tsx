@@ -44,6 +44,21 @@ export default function RootLayout({
           href="/assets/img/big_inc_icon.png"
           type="image/png"
         />
+        <meta
+          name="description"
+          content="Big Inc is a multidisciplinary creative from Delta State, Nigeria, known for his exceptional talent in songwriting, singing, rapping, and art curation."
+        />
+        <meta property="og:title" content="Big Inc" />
+        <meta
+          property="og:description"
+          content="Big Inc is a multidisciplinary creative from Delta State, Nigeria, known for his exceptional talent in songwriting, singing, rapping, and art curation."
+        />
+        <meta
+          property="og:image"
+          content="https://bigincognito.vercel.app/assets/img/inc-the-god.jpg"
+        />
+        <meta property="og:url" content="https://bigincognito.com" />
+        <meta property="og:type" content="website" />
       </head>
       <body className="bg-darkBg bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] w-vw flex flex-col h-dvh overflow-hidden relative">
         <Nav />
