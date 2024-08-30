@@ -135,7 +135,7 @@ export default function Page() {
                 alt="Instagram Thumbnail"
               />
               <a
-                href="https://www.instagram.com/reel/C5lKyRLqz6z/"
+                href="https://www.instagram.com/reel/C7-l36DCflV/?utm_source=ig_web_copy_link"
                 target="_blank"
                 className="absolute z-10"
               >
@@ -145,7 +145,7 @@ export default function Page() {
             <p className="text-xl font-lighten my-5">OLD TESTAMENT GOD</p>
             <div>
               <a
-                href="https://www.instagram.com/reel/C5lKyRLqz6z/"
+                href="https://www.instagram.com/reel/C7-l36DCflV/?utm_source=ig_web_copy_link"
                 target="_blank"
               >
                 <Button
