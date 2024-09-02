@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
   return (
     <div className="flex w-full border-t border-gray-600 h-full relative">
       <div className="tab:w-6/12 base:max-sm:w-full border-r relative border-b border-solid border-gray-500 w-8/12 h-full base:max-md:pl-3 pl-10 pr-3 py-3">
-        <div className="flex justify-between base:max-md:text-lg text-gray-400">
+        <div className="flex base:max-sm:text-[16px] justify-between base:max-md:text-lg text-gray-400">
           <p>RELEASED ON APRIL 26</p>
           <p>2024</p>
         </div>
@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
             <p className="text-2xl base:max-md:text-xl tracking-wide font-lighten font-bold">
               MIXTAPE<span className="relative -top-[2px]">:</span>
             </p>
-            <p className="font-bolden base:max-md:text-7xl text-8xl base:max-md:tracking-[-.05em] tracking-tightest base:max-md:[word-spacing:-7px]">
+            <p className="font-bolden base:max-md:text-6xl text-8xl base:max-md:tracking-[-.05em] tracking-tightest base:max-md:[word-spacing:-7px]">
               Let The
               <br />
               <span className="text-sun font-bolden">Sun</span> Talk
@@ -27,15 +27,15 @@ const Hero: React.FC = () => {
             href="https://audiomack.com/big-incognito/album/let-the-sun-talk"
             target="_blank"
           >
-          <Button
-            className="text-ourWhite px-10 rounded-none bg-[transparent] border font-extralight font-lighten tracking-widest"
-            variant={"outline"}
-          >
-            LISTEN
-          </Button>
+            <Button
+              className="text-ourWhite px-10 rounded-none bg-[transparent] border font-extralight font-lighten tracking-widest"
+              variant={"outline"}
+            >
+              LISTEN
+            </Button>
           </a>
           <div className="absolute w-full base:max-md:pr-3 pr-10 base:max-md:text-lg bottom-3 flex base:max-md:left-3 left-10 items-end justify-between">
-            <p className="text-gray-400 text-justify flex">
+            <p className="text-gray-400 base:max-sm:text-[16px] text-justify flex">
               GOD MAN MACHINE PRESENTS
             </p>
             <div className="w-7 md:w-20">
