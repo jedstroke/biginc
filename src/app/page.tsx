@@ -18,7 +18,7 @@ export default function Page() {
         </p>
         <Karaoke />
       </section>
-      <section className="base:max-md:px-3 py-8 px-10 min-h-80 text-ourWhite mb-40 w-full">
+      <section className="base:max-md:px-3 py-8 px-10 min-h-80 text-ourWhite mb-10 w-full">
         <p className="text-2xl mb-20 base:max-md:text-xl tracking-wide font-lighten font-bold">
           <span className="text-gray-400">*</span>SOME INSTA VISTA
         </p>
@@ -161,12 +161,12 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className="base:max-md:px-3 text-ourWhite py-10 px-10 min-h-80 w-full">
+      <section className="base:max-md:px-3 text-ourWhite py-2 px-10 h-fit w-full">
         <div className="w-full">
           <p className="bg-gradient-to-b from-gray-400 to-white bg-clip-text text-transparent font-bolden base:max-md:text-[45px] text-8xl base:max-md:tracking-[-.05em] tracking-tightest base:max-md:[word-spacing:-7px] text-center">
             EBRUVWIYO ABEKE
           </p>
-          <p className="max-w-[1000px] w-fit mx-auto font-thin poppins-light text-center py-20">
+          <p className="max-w-[1000px] w-fit mx-auto font-thin poppins-light text-center py-5">
             Big Inc is a multidisciplinary creative from Delta State, Nigeria,
             known for his exceptional talent in songwriting, singing, rapping,
             and art curation. A highly skilled and technically gifted rapper, he
