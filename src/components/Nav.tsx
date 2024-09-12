@@ -75,9 +75,9 @@ const Nav: React.FC = () => {
             className="cursor-pointer"
             onClick={() => {
               toast({
-                title: "Page Is Under Construction",
+                title: "This Page Is Coming Soon",
                 description:
-                  "We are working on this page",
+                  "We are BUIDLING",
               });
             }}
           >
@@ -85,9 +85,9 @@ const Nav: React.FC = () => {
               className={`${pathname == "/music" ? "underline" : ""}`}
               onClick={() => {
                 toast({
-                  title: "Page Is Under Construction",
+                  title: "This Page Is Coming Soon",
                   description:
-                    "We are working on this page",
+                    "We are BUIDLing on this page",
                 });
               }}
               href={""}
@@ -99,9 +99,9 @@ const Nav: React.FC = () => {
             className="cursor-pointer"
             onClick={() => {
               toast({
-                title: "Page Is Under Construction",
+                title: "This Page Is Coming Soon",
                 description:
-                  "We are working on this page",
+                  "We are BUIDLING",
               });
             }}
           >
@@ -109,9 +109,9 @@ const Nav: React.FC = () => {
               className={`${pathname == "/tour" ? "underline" : ""}`}
               onClick={() => {
                 toast({
-                  title: "Page Is Under Construction",
+                  title: "This Page Is Coming Soon",
                   description:
-                    "We are working on this page",
+                    "We are BUIDLING",
                 });
               }}
               href={""}
@@ -123,9 +123,9 @@ const Nav: React.FC = () => {
             className="cursor-pointer"
             onClick={() => {
               toast({
-                title: "Page Is Under Construction",
+                title: "This Page Is Coming Soon",
                 description:
-                  "We are working on this page",
+                  "We are BUIDLING",
               });
             }}
           >
@@ -133,9 +133,9 @@ const Nav: React.FC = () => {
               className={`${pathname == "/shop" ? "underline" : ""}`}
               onClick={() => {
                 toast({
-                  title: "Page Is Under Construction",
+                  title: "This Page Is Coming Soon",
                   description:
-                    "We are working on this page",
+                    "We are BUIDLING",
                 });
               }}
               href={""}
@@ -145,8 +145,8 @@ const Nav: React.FC = () => {
           </li>
           <li className="cursor-pointer">
             <Link
-              className={`${pathname == "/dwhitepaper" ? "underline" : ""}`}
-              href={"/dwhitepaper"}
+              className={`${pathname == "/dewhitepaper" ? "underline" : ""}`}
+              href={"/dewhitepaper"}
             >
               deWHITEPAPER
             </Link>
