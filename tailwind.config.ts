@@ -20,7 +20,7 @@ const config = {
         lighten: "PrimaryLightFont, Verdana, Geneva, Tahoma, sans-serif",
       },
       backgroundImage: {
-        "hero-bg": "url('/assets/img/big_inc.jpg')",
+        "block": "url('/assets/img/block.svg')",
       },
       screens: {
         base: "0px",

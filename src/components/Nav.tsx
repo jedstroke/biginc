@@ -13,7 +13,7 @@ const Nav: React.FC = () => {
   const pathname = usePathname();
   const { toast } = useToast();
   return (
-    <nav className="w-full sticky top-[0] z-50">
+    <nav className="w-full font-bolden sticky top-[0] z-50">
       <div className="mx-auto base:max-md:px-3 relative items-center flex py-5 px-10 w-full max-w-screen-2xl">
         <Image
           priority

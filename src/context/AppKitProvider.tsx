@@ -1,37 +1,47 @@
-"use client";
+'use client'
 
-import React, { ReactNode } from "react";
-import { config, projectId, metadata } from "@lib/wallet/config";
+import { wagmiAdapter, projectId } from '@/lib/wallet/config'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { createAppKit } from '@reown/appkit/react'
+import {polygon, polygonAmoy } from '@reown/appkit/networks'
+import React, { type ReactNode } from 'react'
+import { cookieToInitialState, WagmiProvider, type Config } from 'wagmi'
 
-import { createWeb3Modal } from "@web3modal/wagmi/react";
+// Set up queryClient
+const queryClient = new QueryClient()
 
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+if (!projectId) {
+  throw new Error('Project ID is not defined')
+}
 
-import { State, WagmiProvider } from "wagmi";
+// Set up metadata
+const metadata = {
+  name: "Big Inc",
+  description: "An artist onchain.",
+  url: "https://www.bigcognito.com",
+  icons: ["https://www.bigincognito.com/assets/img/big_inc_icon.png"],
+};
 
-// Setup queryClient
-const queryClient = new QueryClient();
-
-if (!projectId) throw new Error("Project ID is not defined");
-
-// Create modal
-createWeb3Modal({
-  metadata,
-  wagmiConfig: config,
+// Create the modal
+const modal = createAppKit({
+  adapters: [wagmiAdapter],
   projectId,
-  enableAnalytics: true, // Optional - defaults to your Cloud configuration
-});
+  networks: [polygon, polygonAmoy],
+  defaultNetwork: polygon,
+  metadata: metadata,
+  features: {
+    analytics: true // Optional - defaults to your Cloud configuration
+  }
+})
 
-export default function AppKitProvider({
-  children,
-  initialState,
-}: {
-  children: ReactNode;
-  initialState?: State;
-}) {
+function ContextProvider({ children, cookies }: { children: ReactNode; cookies: string | null }) {
+  const initialState = cookieToInitialState(wagmiAdapter.wagmiConfig as Config, cookies)
+
   return (
-    <WagmiProvider config={config} initialState={initialState}>
+    <WagmiProvider config={wagmiAdapter.wagmiConfig as Config} initialState={initialState}>
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
     </WagmiProvider>
-  );
+  )
 }
+
+export default ContextProvider

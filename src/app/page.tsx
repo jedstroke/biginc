@@ -12,16 +12,16 @@ export default function Page() {
     <main className="w-full h-full max-w-screen-2xl mx-auto">
       <Hero />
       <section className="py-8 max-md:py-4 relative max-md:top-32 w-full">
-        <p className="text-2xl text-ourWhite text-center">
+        <h2 className="text-2xl text-ourWhite text-center">
           <span className="text-gray-400">𝅗𝅥♭♯</span> SINGING SUN{" "}
           <span className="text-gray-400">♪♫</span>
-        </p>
+        </h2>
         <Karaoke />
       </section>
       <section className="base:max-md:px-3 py-8 px-10 min-h-80 text-ourWhite mb-10 w-full">
-        <p className="text-2xl mb-20 base:max-md:text-xl tracking-wide font-lighten font-bold">
+        <h2 className="text-2xl mb-20 base:max-md:text-xl tracking-wide font-lighten font-bold">
           <span className="text-gray-400">*</span>SOME INSTA VISTA
-        </p>
+        </h2>
         <div className="flex w-full  my-10 mfer">
           <div className="flex max-sm:w-full flex-col">
             <div className="w-[100%] min-[630px]:w-[600px] flex justify-center items-center relative">
@@ -38,9 +38,9 @@ export default function Page() {
                 <PlayVideo />
               </a>
             </div>
-            <p className="text-xl font-lighten my-5">
+            <h3 className="text-xl font-lighten my-5">
               THEY ALWAYS HAUNT MY DREAMS
-            </p>
+            </h3>
             <div>
               <a
                 href="https://www.instagram.com/reel/C2EsFbtKWTR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
@@ -74,7 +74,7 @@ export default function Page() {
                 <PlayVideo />
               </a>
             </div>
-            <p className="text-xl font-lighten my-5">ALL MY LIFE (COVER)</p>
+            <h3 className="text-xl font-lighten my-5">ALL MY LIFE (COVER)</h3>
             <div>
               <a
                 href="https://www.instagram.com/reel/Cs3F_eJKay4/"
@@ -108,7 +108,7 @@ export default function Page() {
                 <PlayVideo />
               </a>
             </div>
-            <p className="text-xl font-lighten my-5">FREEFORM BALLET</p>
+            <h3 className="text-xl font-lighten my-5">FREEFORM BALLET</h3>
             <div>
               <a
                 href="https://www.instagram.com/reel/C5lKyRLqz6z/"
@@ -142,7 +142,7 @@ export default function Page() {
                 <PlayVideo />
               </a>
             </div>
-            <p className="text-xl font-lighten my-5">OLD TESTAMENT GOD</p>
+            <h3 className="text-xl font-lighten my-5">OLD TESTAMENT GOD</h3>
             <div>
               <a
                 href="https://www.instagram.com/reel/C7-l36DCflV/?utm_source=ig_web_copy_link"
@@ -163,9 +163,9 @@ export default function Page() {
       </section>
       <section className="base:max-md:px-3 text-ourWhite py-2 px-10 h-fit w-full">
         <div className="w-full">
-          <p className="bg-gradient-to-b from-gray-400 to-white bg-clip-text text-transparent font-bolden base:max-md:text-[45px] text-8xl base:max-md:tracking-[-.05em] tracking-tightest base:max-md:[word-spacing:-7px] text-center">
+          <h2 className="bg-gradient-to-b from-gray-400 to-white bg-clip-text text-transparent font-bolden base:max-md:text-[45px] text-8xl base:max-md:tracking-[-.05em] tracking-tightest base:max-md:[word-spacing:-7px] text-center">
             EBRUVWIYO ABEKE
-          </p>
+          </h2>
           <p className="max-w-[1000px] w-fit mx-auto font-thin poppins-light text-center py-5">
             Big Inc is a multidisciplinary creative from Delta State, Nigeria,
             known for his exceptional talent in songwriting, singing, rapping,
