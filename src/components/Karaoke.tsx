@@ -46,7 +46,7 @@ const Karaoke: React.FC<KaraokeProps> = ({
     {
       startTime: 23,
       endTime: 27,
-      line: "Look, Regurgitating my statements I'm coming thru like an amen"
+      line: "Look, regurgitating my statements I'm coming thru like an amen"
     },
 
     {
@@ -122,7 +122,7 @@ const Karaoke: React.FC<KaraokeProps> = ({
     {
       startTime: 68,
       endTime: 70,
-      line: "So I gotta stand strong like captain leonidas"
+      line: "So I gotta stand strong like captain Leonidas"
     },
     {
       startTime: 70,
@@ -132,28 +132,28 @@ const Karaoke: React.FC<KaraokeProps> = ({
     {
       startTime: 74,
       endTime: 78,
-      line: "My eternal sunshine The feelings don’t die I needed more time"
+      line: "My eternal sunshine the feelings don’t die I needed more time"
     },
     {
       startTime: 78,
       endTime: 82,
-      line: "But I gotta move on Right a few wrongs Write a new song"
+      line: "But I gotta move on right a few wrongs write a new song"
     },
     {
       startTime: 82,
       endTime: 86,
-      line: "So mama watch your son as he fight fears And wipe tears and travel light years"
+      line: "So mama watch your son as he fight fears and wipe tears and travel light years"
     },
     {
       startTime: 86,
       endTime: 92,
-      line: "When Im 80 with my great grand babies and I play this in my vintage Mercedes ayy"
+      line: "When I'm 80 with my great grand babies and I play this in my vintage Mercedes ayy"
     },
 
     {
       startTime: 93,
       endTime: 97,
-      line: "Y’all welcome to my odyssey I hope my dreams come thru like a prophecy"
+      line: "Y’all welcome to my Odyssey I hope my dreams come thru like a prophecy"
     },
     {
       startTime: 97,
@@ -163,7 +163,7 @@ const Karaoke: React.FC<KaraokeProps> = ({
     {
       startTime: 103,
       endTime: 107,
-      line: "It’s a cold world mama was my cardigan Now she 6 foot breathless like a mannequin "
+      line: "It’s a cold world mama was my cardigan now she 6 foot breathless like a mannequin "
     },
     {
       startTime: 107,
