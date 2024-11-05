@@ -11,44 +11,62 @@ import { useReadContracts } from 'wagmi'
 import { abi } from '../../abi/BigIncGenesis.json';
 import { contractAddress } from "@lib/wallet/config";
 import { formatUnits } from "viem";
+
+
 export default function Page() {
   const totalShare = 100
   const { address, isConnected } = useAppKitAccount();
   const [yourShare, setYourShare] = useState(0)
+  const [availableShare, setAvailableShare] = useState(0)
+  const [soldShare, setSoldShare] = useState(0)
+  const [crypto, setCrypto] = useState("usdt")
   const getShares = {
     abi,
     address: contractAddress as `0x${string}`,
     functionName: 'getShares',
     args: [address as `0x${string}`],
   }
-  const availbaleShares = {
+  const availableShares = {
     abi,
     address: contractAddress as `0x${string}`,
     functionName: 'availableShares',
     args: [],
   }
+  const soldShares = {
+    abi,
+    address: contractAddress as `0x${string}`,
+    functionName: 'sharesSold',
+    args: [],
+  }
 
   const {data, isSuccess} = useReadContracts({
-    contracts: [getShares, availbaleShares],
+    contracts: [getShares, availableShares, soldShares],
   });
 
   useEffect(() => {
-    if(isConnected){
-      console.log(data)
-      // setYourShare(Number(formatUnits(data as bigint, 6)));
-    }else{
-      setYourShare(0);
+    try {
+      if(isConnected){
+        setYourShare(Number(formatUnits(data?.[0]?.result as bigint, 6)));
+        setAvailableShare(Number(formatUnits(data?.[1]?.result as bigint, 6)));
+        setSoldShare(Number(formatUnits(data?.[2]?.result as bigint, 6)));
+      }else{
+        setYourShare(0);
+        setAvailableShare(0);
+        setSoldShare(0);
+      }
+    } catch (error) {
+      console.log(error)
     }
-  }, [isSuccess]);
+  }, [isSuccess, isConnected]);
   return (
     <main className="w-full h-full max-w-screen-2xl mx-auto">
-      <header className="py-10 base:max-md:px-3 px-10 items-center border-b border-gray-600 max-md:py-4 flex relative max-md:top-32 w-full">
+      <header className="py-2 h-fit base:max-md:px-3 px-10 items-center border-b border-gray-600 max-md:py-4 flex relative top-0 w-full">
         <div className="w-fit">
-          <p className="bg-gradient-to-t from-gray-400 mb-3 base:max-md:text-6xl text-8xl to-white bg-clip-text text-transparent font-bolden">
-            deWHITEPAPER <span className="from-gray-400 text-[25px]">noun</span>
+          <p className="bg-gradient-to-t mt-4 from-gray-400 mb-3 tab:text-8xl tracking-tighter text-4xl to-white bg-clip-text text-transparent font-bolden">
+            deWHITEPAPER<span className="from-gray-400 tracking-tighter text-[10px] tab:text-[20px]">noun</span>
           </p>
           <div className="p-4">
-            <div className="mx-auto px-6 relative min-h-32 border-l-gray-600 border-l-2 border-dashed">
+            <div className="mx-auto px-6 relative h-fit min-h-32 border-l-gray-600 border-l-2 border-dashed">
               <div id="timeline-item" className="text-ourWhite flex  mb-5">
                 <span className="absolute flex items-center justify-center -left-[23px] bg-cover bg-block rounded w-10 h-10">
                   1
@@ -83,15 +101,15 @@ export default function Page() {
                     : a detailed description with reports from{" "}
                     <strong className="poppins-extrabold">deBlockchain</strong>{" "}
                     of the project targeted at{" "}
-                    <strong className="poppins-extrabold">deGens</strong> &{" "}
-                    <strong className="poppins-extrabold">deFans</strong>.
+                    <strong className="poppins-extrabold">deGens</strong>,{" "}
+                    <strong className="poppins-extrabold">deFans</strong>, and <strong className="poppins-extrabold">deInvestors</strong>
                   </dd>
                   <dd className="poppins-regular pl-3">
-                    example: I signed the whale&apos;s share of Inc&apos;s
+                    For example: I signed the whale&apos;s share of Inc&apos;s
                     <strong className="poppins-extrabold"> deWhitepaper</strong>
                     —I am bullish on what he cooking.
                   </dd>
-                  <dd className="flex h-fit pl-3 items-center mt-3 gap-3">
+                  <dd className="flex flex-col lg:flex-row h-fit pl-3 items-center mt-3 gap-3">
                     <span className="poppins-regular">
                       ...connect your wallet if you wanna own a share, or
                       monitor your share
@@ -106,15 +124,15 @@ export default function Page() {
       </header>
       <section
         id="issue-1"
-        className="base:max-md:px-3 min-h-[600px] text-ourWhite py-6 px-10 h-fit w-[1000px]"
+        className="base:max-md:px-3 min-h-[600px] text-ourWhite py-6 px-10 h-fit w-full lg:w-[1000px]"
       >
-        <h1 className="text-4xl mb-5 base:max-md:text-xl pt-5 tracking-wide uppercase font-bolden">
+        <h1 className="tab:text-6xl text-3xl mb-5 pt-5 tracking-wide uppercase font-bolden">
           ISSUE #1.1: The Genesis & Presale
         </h1>
-        <h2 className="text-3xl font-bolden py-4">
+        <h2 className="text-2xl font-bolden py-4">
           deWhitepaper: Empowering deGens, deFans, & deArtists
         </h2>
-        <div className="w-[880px]">
+        <div className="w-full lg:w-[880px]">
           <em className="poppins-regular-italic">
             It’s so apropos when a smart contract function name carries meaning,
             like{" "}
@@ -123,7 +141,7 @@ export default function Page() {
             </code>
             .
           </em>
-          <p className="poppins-regular text-justify my-3">
+          <p className="poppins-regular my-3">
             In this decentralized music revolution, we hope to flip the
             traditional record label model on its head—putting control in the
             hands of <strong className="poppins-extrabold">deGens</strong>,{" "}
@@ -134,11 +152,11 @@ export default function Page() {
             emerging talent—on-chain and fully transparent.
           </p>
         </div>
-        <h2 className="text-3xl font-bolden py-4">
+        <h2 className="text-2xl font-bolden py-4">
           On-chain Shareholders Get Real Stakes
         </h2>
-        <div className="w-[880px]">
-          <p className="poppins-regular text-justify my-3">
+        <div className="w-full lg:w-[880px]">
+          <p className="poppins-regular  my-3">
             In the inaugural presale of shares,{" "}
             <strong className="poppins-extrabold">deGens</strong>, fans, and
             investors will have the opportunity to mint shares, recorded
@@ -159,9 +177,8 @@ export default function Page() {
           <div className="poppins-regular">
             Shareholders own
             <strong className="poppins-extrabold">
-              <span>82%</span> of the total
-            </strong>{" "}
-            revenue pool which is based on the artist's performance why the team (and the artist) own 18%. This includes:
+              <span> 82%</span> of the total revenue pool</strong>{" "}
+            on contract creation which is based on the artist's performance while the team (and the artist) <strong className="poppins-extrabold">own <span>18%</span> of shares on contract creation.</strong> This means:
             <ul className="list-disc px-8 py-4">
               <li className="poppins-regular my-4">
                 <strong className="poppins-extrabold">
@@ -180,19 +197,19 @@ export default function Page() {
                 <strong className="poppins-extrabold">
                   Promotions & endorsements:
                 </strong>{" "}
-                If your artist secures brand deals or partnerships during this
+                If the artist secures brand deals or partnerships during this
                 album's lifecycle, shareholders will benefit.
               </li>
               <li className="poppins-regular my-4">
                 <strong className="poppins-extrabold">Tour revenue:</strong>{" "}
-                Every ticket sold for performances related to this album will
+                Every ticket sold for performances during this album's lifecycle will
                 contribute to the pool.
               </li>
               <li className="poppins-regular my-4">
                 <strong className="poppins-extrabold">
                   Master recordings & sync license:
                 </strong>{" "}
-                Shareholders will own a piece of the artist’s master & sync license fee per thier shares—
+                Shareholders will own a piece of the artist’s master & sync license fee per their shares—
                 <strong className="poppins-extrabold">
                   <span>82%</span>
                 </strong>{" "}
@@ -200,8 +217,8 @@ export default function Page() {
                 <strong className="poppins-extrabold">
                   <span>18%</span>
                 </strong>{" "}
-                to the team.
-                And if a shareholder wants to utilize the master license, or sync license will pay, but will be a discounted fee per their share (like their percentage slash the original master/sync fee).
+                to the team on contract creation, this clause could change if the team (and the artist) buys their own shares back making shareholders' pool reduced.
+                And if a shareholder wants to utilize the master license, or sync license will pay a fee, but will be a discounted fee per their share (like their share percentage slash the original master/sync fee).
                 Failure to
                 comply with these terms may result in the seizure of the
                 shareholder’s shares, along with potential legal action for
@@ -216,14 +233,14 @@ export default function Page() {
             <strong className="poppins-extrabold">
               <span>21%</span> of the shares
             </strong>{" "}
-            (<span>$142,800</span> in shares valuation) being sold for{" "}
-            <span>$96,000</span>. This offers a
+            (<strong className="poppins-extrabold"><span>$142,800</span></strong> in shares valuation when the total valuation is <strong>$680,000</strong>) being sold for{" "}
+            <strong>$96,000</strong> when the total valuation is <strong>$457,143</strong>. This offers a
             <strong className="poppins-extrabold">
               {" "}
               <span>≈ 48.75%</span> profit
             </strong>{" "}
             for early backers upon resale. Once the presale target is met, the
-            smart contract will automatically adjust to the normal pricing tier.
+            smart contract will automatically adjust to the normal pricing tier (where the total valuation is <strong>$680,000</strong>).
           </div>
           <p className="poppins-regular">
             Proceeds from the presale will be allocated as follows:
@@ -238,7 +255,7 @@ export default function Page() {
             </li>
             <li className="poppins-regular my-4">
               <strong className="poppins-extrabold">Studio production:</strong>{" "}
-              Crafting high-quality singles before before the album completion
+              Crafting high-quality singles before the album completion
               (longer than an EP).
             </li>
             <li className="poppins-regular my-4">
@@ -257,26 +274,12 @@ export default function Page() {
               .
             </li>
           </ul>
-          <p className="poppins-regular">
-            Additionally,{" "}
-            <strong className="poppins-extrabold">
-              <span>18%</span> of the total shares
-            </strong>{" "}
-            will be allocated to the team. The remaining shares will go into the
-            treasury for{" "}
-            <strong className="poppins-extrabold">album development</strong>,
-            with <strong className="poppins-extrabold">deFans</strong>,{" "}
-            <strong className="poppins-extrabold">deGens</strong>, and
-            <strong className="poppins-extrabold"> deInvestors</strong> kept
-            fully informed about expenditures to maintain transparency and
-            foster growth.
-          </p>
         </div>
-        <h2 className="text-3xl font-bolden py-4">
-          On-Chain Transparency Doesn't Suffice
+        <h2 className="text-2xl font-bolden py-4">
+          On-Chain Transparency Itself Doesn't Suffice
         </h2>
-        <div className="w-[880px]">
-          <p className="poppins-regular text-justify my-3">
+        <div className="w-full lg:w-[880px]">
+          <p className="poppins-regular my-3">
             While on-chain transparency is a fundamental pillar of this project,
             we believe it alone is not enough. True transparency requires
             accountability not just in the blockchain operations but also in how
@@ -336,18 +339,18 @@ export default function Page() {
               with no hidden fees or undisclosed deductions.
             </li>
           </ul>
-          <p className="poppins-regular text-justify my-3">
+          <p className="poppins-regular  my-3">
             Shares revenue will be distributed quarterly after every 3-month in stablecoins (USDC/USDT on the Polygon chain) to the mapped addresses of our shareholders.
           </p>
         </div>
-        <h2 className="text-3xl font-bolden py-4">Outro</h2>
-        <div className="w-[880px]">
-          <p className="poppins-regular text-justify my-3">
+        <h2 className="text-2xl font-bolden py-4">Outro</h2>
+        <div className="w-full lg:w-[880px]">
+          <p className="poppins-regular  my-3">
             We want to show the world what we've been listening to; the
             countless artists who have shaped our psyche with their
             soul-throbbing sounds. Now, we’re giving it back—through the
             unbridled artistry pulsing in our veins and soul. We're carving a
-            path, or template for indie artists, who create in the shadows, to break free
+            path, and template for indie artists, who create in the shadows, to break free
             from the chains of obscurity & conformity to find empowerment on-chain, through
             our collective success story.
           </p>
@@ -362,14 +365,15 @@ export default function Page() {
             <CardTitle className="text-center text-2xl">Share Distribution</CardTitle>
           </CardHeader>
           <p className="text-center poppins-regular">
-            You own {yourShare}% of the total shares.
+            You own <span>{yourShare}%</span> of the total shares.
           </p>
           <CardContent className="flex flex-col items-center gap-4">
-            <ShareChart totalShare={totalShare} yourShare={yourShare} />
-            <ShareModal totalShare={totalShare} />
+            <ShareChart yourShare={yourShare} soldShare={soldShare} availableShare={availableShare} />
+            <ShareModal crypto={crypto} totalShare={totalShare} yourShare={yourShare} onCryptoChange={setCrypto} />
           </CardContent>
         </Card>
       </section>
+      <p className="w-full text-center poppins-regular text-[#A8AEB9] my-3 p-5"><strong className="poppins-extrabold text-[#A8AEB9]">Disclosure:</strong> Not Financial Advice (NFA). But we are a community-driven project, and we are building this as a template to setup a proven rebel label on-chain with our integrity & reputation which we hold dearly to this becomes a successful story. We are not selling shares to the public, but to our community, and anyone who is willing to join our community. Feel free to join our community and be part of this trailblazing journey.</p>
     </main>
   );
 }

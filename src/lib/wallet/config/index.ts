@@ -11,7 +11,7 @@ if (!projectId) {
 
 export const networks = [polygon, polygonAmoy];
 
-export const contractAddress = "0x2dD3fc31fEf77354c1a61C5e432FA101d883a0f5";
+export const contractAddress = "0x34Da66269431a3DaDE50DA17F88F4b8F1F2Ed771";
 
 export const metadata = {
   name: "Big Inc",

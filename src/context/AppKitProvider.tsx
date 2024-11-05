@@ -17,7 +17,7 @@ if (!projectId) {
 // Set up metadata
 const metadata = {
   name: "Big Inc",
-  description: "An artist onchain.",
+  description: "An artist with a rebel label onchain.",
   url: "https://www.bigcognito.com",
   icons: ["https://www.bigincognito.com/assets/img/big_inc_icon.png"],
 };

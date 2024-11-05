@@ -1,26 +1,27 @@
 "use client"
-
 import React from 'react'
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts'
 import { Card, CardContent} from "@/components/ui/card"
 
 interface ShareChartProps {
-    totalShare: number
-    yourShare: number
+    availableShare?: number
+    yourShare?: number
+    soldShare?: number
 }
 
-export function ShareChart({ totalShare, yourShare }: ShareChartProps) {
+export function ShareChart({ availableShare = 100, yourShare = 0, soldShare = 0 }: ShareChartProps) {
     const data = [
-        { name: 'Your Share', value: yourShare },
-        { name: 'Others', value: totalShare - yourShare },
+        { name: 'Your Shares', value: yourShare },
+        { name: 'Available Shares', value: availableShare},
+        { name: 'Sold Shares', value: soldShare},
     ]
 
-    const COLORS = ['#506AE9', '#9FA4AE']
+    const COLORS = ['#506AE9', '#9FA4AE', '#7BB274']
 
     return (
-        <Card className="w-full max-w-md border-none bg-transparent">
+        <Card className="w-full poppins-regular max-w-md border-none bg-transparent">
             <CardContent>
-                <ResponsiveContainer width="100%" height={300}>
+                <ResponsiveContainer className="poppins-regular" width="100%" height={300}>
                     <PieChart>
                         <Pie
                             data={data}
@@ -32,11 +33,11 @@ export function ShareChart({ totalShare, yourShare }: ShareChartProps) {
                             dataKey="value"
                         >
                             {data.map((entry, index) => (
-                                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                                <Cell className='poppins-regular' key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                             ))}
                         </Pie>
                         <Tooltip />
-                        <Legend />
+                        <Legend className='poppins-regular' />
                     </PieChart>
                 </ResponsiveContainer>
             </CardContent>
