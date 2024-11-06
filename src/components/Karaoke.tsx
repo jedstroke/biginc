@@ -36,6 +36,139 @@ const Karaoke: React.FC<KaraokeProps> = ({
       startTime: 16,
       endTime: 18,
       line: "They both down to pleasure me, right orally",
+    },
+    {
+      startTime: 19,
+      endTime: 23,
+      line: "I'm the bipolar write columns, write poems write puns"
+    },
+
+    {
+      startTime: 23,
+      endTime: 27,
+      line: "Look, regurgitating my statements I'm coming thru like an amen"
+    },
+
+    {
+      startTime: 28,
+      endTime: 30,
+      line: "Eradicating the demons with 42's that I'm aiming"
+    },
+
+    {
+      startTime: 30,
+      endTime: 31,
+      line: "'Stead of always complaining"
+    },
+
+    {
+      startTime: 31,
+      endTime: 33,
+      line: "Rather work my brain and triple all of my earnings"
+    },
+
+    {
+      startTime: 33,
+      endTime: 37,
+      line: "Ignite the fiery furnace with speeds of burning comets"
+    },
+
+    {
+      startTime: 38,
+      endTime: 42,
+      line: "Cus I'm a rare jewel like the Israelite I travel faster than the speed of light"
+    },
+
+    {
+      startTime: 42,
+      endTime: 45,
+      line: "Then illuminate the world when I take the night"
+    },
+    {
+      startTime: 45,
+      endTime: 51,
+      line: "Before my body turn to clay Me thank the lord for everyday I"
+    },
+
+    {
+      startTime: 51,
+      endTime: 55,
+      line: "Miss my mama everyday Sometimes I cry me a river"
+    },
+
+    {
+      startTime: 56,
+      endTime: 58,
+      line: "Before my ashes blow away"
+    },
+
+    {
+      startTime: 59,
+      endTime: 61,
+      line: "Me try me best to find a way"
+    },
+
+    {
+      startTime: 62,
+      endTime: 66,
+      line: "Before my body turn to clay Me travel light years in a day"
+    },
+
+    {
+      startTime: 66,
+      endTime: 68,
+      line: "I miss mum only God can reunite us"
+    },
+    {
+      startTime: 68,
+      endTime: 70,
+      line: "So I gotta stand strong like captain Leonidas"
+    },
+    {
+      startTime: 70,
+      endTime: 72,
+      line: "You a star and you shine the brightest ay"
+    },
+    {
+      startTime: 74,
+      endTime: 78,
+      line: "My eternal sunshine the feelings don’t die I needed more time"
+    },
+    {
+      startTime: 78,
+      endTime: 82,
+      line: "But I gotta move on right a few wrongs write a new song"
+    },
+    {
+      startTime: 82,
+      endTime: 86,
+      line: "So mama watch your son as he fight fears and wipe tears and travel light years"
+    },
+    {
+      startTime: 86,
+      endTime: 92,
+      line: "When I'm 80 with my great grand babies and I play this in my vintage Mercedes ayy"
+    },
+
+    {
+      startTime: 93,
+      endTime: 97,
+      line: "Y’all welcome to my Odyssey I hope my dreams come thru like a prophecy"
+    },
+    {
+      startTime: 97,
+      endTime: 103,
+      line: "And when things get dark you be my light again sky walking sky walking like Anakin"
+    },
+    {
+      startTime: 103,
+      endTime: 107,
+      line: "It’s a cold world mama was my cardigan now she 6 foot breathless like a mannequin "
+    },
+    {
+      startTime: 107,
+      endTime: 111,
+      line: "♫♪♫",
     }
   ],
 }) => {
@@ -65,21 +198,21 @@ const Karaoke: React.FC<KaraokeProps> = ({
     }
   };
 
-  const handleAudioLoading = () => {};
+  const handleAudioLoading = () => { };
 
-  const handleAudioPlaying = () => {};
+  const handleAudioPlaying = () => { };
 
   const updateCurrentTime = () => {
     if (audioRef.current) {
       setCurrentTime(audioRef.current.currentTime);
     }
   };
-   const handleAudioEnded = () => {
-     if (audioRef.current) {
-       audioRef.current.currentTime = 0;
-       playAudio(); // Restart the audio when it ends
-     }
-   };
+  const handleAudioEnded = () => {
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0;
+      playAudio(); // Restart the audio when it ends
+    }
+  };
 
 
   useEffect(() => {
@@ -155,19 +288,18 @@ const Karaoke: React.FC<KaraokeProps> = ({
         >
           <audio
             ref={audioRef}
-            src="/assets/music/light_years-trimmed.mp3"
+            src="/assets/music/light_years.mp3"
           ></audio>
           {lyricData.map((line, index) => (
             <p
               key={index}
               id={`lyric-${index}`}
-              className={`hover:text-slate-100 base:mb-4 tab:mb-6 base:text-[20px] tab:text-[27px] base:max-tab:leading-7 tab:text-4xl font-bolden cursor-pointer ${
-                currentTime >= line.startTime && currentTime <= line.endTime
-                  ? "text-ourWhite"
-                  : currentTime > line.endTime
+              className={`hover:text-slate-100 base:mb-4 tab:mb-6 base:text-[20px] tab:text-[27px] base:max-tab:leading-7 tab:text-4xl font-bolden cursor-pointer ${currentTime >= line.startTime && currentTime <= line.endTime
+                ? "text-ourWhite"
+                : currentTime > line.endTime
                   ? "text-slate-200"
                   : "text-black"
-              }`}
+                }`}
               onClick={() => handleLineClick(line.startTime)}
             >
               {line.line}

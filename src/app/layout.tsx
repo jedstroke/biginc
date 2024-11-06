@@ -2,6 +2,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "@components/Nav";
+import { headers } from 'next/headers'
+import AppKitProvider from "@context/AppKitProvider";
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
@@ -14,6 +16,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookies: string = headers().get('cookie')!
+
   return (
     <html lang="en">
       <head>
@@ -63,7 +67,9 @@ export default function RootLayout({
       <body className="bg-darkBg bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] w-vw flex flex-col h-dvh overflow-hidden relative">
         <Nav />
         <main className="grow custom-scrollbar overflow-auto overflow-x-hidden">
-          {children}
+          <AppKitProvider cookies={cookies}>
+            {children}
+          </AppKitProvider>
         </main>
         <Toaster />
       </body>

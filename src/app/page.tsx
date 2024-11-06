@@ -12,16 +12,16 @@ export default function Page() {
     <main className="w-full h-full max-w-screen-2xl mx-auto">
       <Hero />
       <section className="py-8 max-md:py-4 relative max-md:top-32 w-full">
-        <p className="text-2xl text-ourWhite text-center">
+        <h2 className="text-2xl text-ourWhite text-center">
           <span className="text-gray-400">𝅗𝅥♭♯</span> SINGING SUN{" "}
           <span className="text-gray-400">♪♫</span>
-        </p>
+        </h2>
         <Karaoke />
       </section>
       <section className="base:max-md:px-3 py-8 px-10 min-h-80 text-ourWhite mb-10 w-full">
-        <p className="text-2xl mb-20 base:max-md:text-xl tracking-wide font-lighten font-bold">
+        <h2 className="text-2xl mb-20 base:max-md:text-xl tracking-wide font-lighten font-bold">
           <span className="text-gray-400">*</span>SOME INSTA VISTA
-        </p>
+        </h2>
         <div className="flex w-full  my-10 mfer">
           <div className="flex max-sm:w-full flex-col">
             <div className="w-[100%] min-[630px]:w-[600px] flex justify-center items-center relative">
@@ -38,9 +38,9 @@ export default function Page() {
                 <PlayVideo />
               </a>
             </div>
-            <p className="text-xl font-lighten my-5">
-              THEY ALWAYS HAUNT MY DREAMS
-            </p>
+            <h3 className="text-xl font-lighten my-5">
+              DO BETTER (COVER)
+            </h3>
             <div>
               <a
                 href="https://www.instagram.com/reel/C2EsFbtKWTR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
@@ -58,7 +58,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <div className="flex w-full  my-10 mfer">
+        <div className="flex w-full relative top-[-240px] my-10 mfer">
           <div className="flex max-sm:w-full flex-col">
             <div className="w-[100%] min-[630px]:w-[600px] flex justify-center items-center relative">
               <img
@@ -74,7 +74,7 @@ export default function Page() {
                 <PlayVideo />
               </a>
             </div>
-            <p className="text-xl font-lighten my-5">ALL MY LIFE (COVER)</p>
+            <h3 className="text-xl font-lighten my-5">ALL MY LIFE (COVER)</h3>
             <div>
               <a
                 href="https://www.instagram.com/reel/Cs3F_eJKay4/"
@@ -108,7 +108,7 @@ export default function Page() {
                 <PlayVideo />
               </a>
             </div>
-            <p className="text-xl font-lighten my-5">FREEFORM BALLET</p>
+            <h3 className="text-xl font-lighten my-5">FREEFORM BALLET</h3>
             <div>
               <a
                 href="https://www.instagram.com/reel/C5lKyRLqz6z/"
@@ -126,7 +126,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <div className="flex w-full my-10 mfer">
+        <div className="flex w-full relative top-[-240px] my-10 mfer">
           <div className="flex max-sm:w-full flex-col">
             <div className="w-[100%] min-[630px]:w-[600px] flex justify-center items-center relative">
               <img
@@ -142,7 +142,7 @@ export default function Page() {
                 <PlayVideo />
               </a>
             </div>
-            <p className="text-xl font-lighten my-5">OLD TESTAMENT GOD</p>
+            <h3 className="text-xl font-lighten my-5">OLD TESTAMENT GOD</h3>
             <div>
               <a
                 href="https://www.instagram.com/reel/C7-l36DCflV/?utm_source=ig_web_copy_link"
@@ -161,22 +161,19 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className="base:max-md:px-3 text-ourWhite py-2 px-10 h-fit w-full">
-        <div className="w-full">
-          <p className="bg-gradient-to-b from-gray-400 to-white bg-clip-text text-transparent font-bolden base:max-md:text-[45px] text-8xl base:max-md:tracking-[-.05em] tracking-tightest base:max-md:[word-spacing:-7px] text-center">
+      <section className="base:max-md:px-3 text-ourWhite px-10 h-fit w-full">
+        <div className="w-full relative top-[-140px]">
+          <h2 className="bg-gradient-to-b from-gray-400 to-white bg-clip-text text-transparent font-bolden base:max-md:text-[45px] text-8xl base:max-md:tracking-[-.05em] tracking-tightest base:max-md:[word-spacing:-7px] text-center">
             EBRUVWIYO ABEKE
-          </p>
-          <p className="max-w-[1000px] w-fit mx-auto font-thin poppins-light text-center py-5">
-            Big Inc is a multidisciplinary creative from Delta State, Nigeria,
-            known for his exceptional talent in songwriting, singing, rapping,
-            and art curation. A highly skilled and technically gifted rapper, he
-            stands out in the Nigerian hip hop scene. In his spare time, he
-            delves into complex narratives, exploring themes from spirituality
-            to love and human nature in his lyrics. Balancing mathematics,
-            literature, and music during his undergrad years, he earned a
-            bachelor&apos;s degree in mathematics from Delta State University,
-            Abraka. With his unique artistic approach, Big Inc is poised to
-            become one of Nigeria&apos;s greatest rappers.
+          </h2>
+          <p className="max-w-[1000px] w-fit mx-auto font-thin poppins-light text-center py-2">
+            Big Inc is a multidisciplinary creative from Delta State, Nigeria, known for his exceptional talent in songwriting, singing, rapping, and art curation. A highly skilled and technically gifted rapper, he brings intricate wordplay and thought-provoking lyrics to his music.
+
+            Big Inc’s artistry is shaped by a diverse range of influences, from the nuanced lyricism of MF Doom, Black Thought, and Jay Electronica to the introspective depth of Ab-Soul. His sonic palette is further enriched by the alt-rap, rock, and genre-blending sounds of Twenty One Pilots, Linkin Park, The Plot In You, and Bring Me The Horizon, alongside the electronic and folk influences of Empire Of The Sun, and Bon Iver.
+
+            In his spare time, he explores complex narratives in his lyrics, touching on themes from spirituality to love and human nature. His creative journey draws on an academic background where he balanced mathematics, literature, and music, eventually earning a bachelor’s degree in mathematics from Delta State University, Abraka.
+
+            With his upcoming projects, Big Inc is excited to experiment across genres, starting with indie folk fusion and branching into rock and hip hop—remaining true to his roots yet unafraid to explore the edges. With such a unique artistic approach and range of influences, Big Inc is poised to make a powerful impact and emerge as one of Nigeria’s most innovative voices in music.
           </p>
         </div>
       </section>
@@ -201,11 +198,11 @@ export default function Page() {
             url="https://discord.gg/XkAHafhGjp"
           />
         </div>
-        <div className="max-sm:flex-col flex py-5 max-sm:items-center max-sm:gap-5 text-gray-400 justify-between w-full">
-          <span className="poppins-light uppercase">
-            © {new Date().getFullYear()} Big Inc. all rights reserved.
+        <div className="max-sm:flex-col flex py-1 max-sm:items-center max-sm:gap-5 text-gray-400 text-sm justify-between w-full">
+          <span className="uppercase">
+            <span className="relative top-[-2.5px]">©</span> {new Date().getFullYear()} Big Inc.
           </span>
-          <span className="w-fit uppercase text-gray-400 poppins-light gap-1 flex items-center  break-keep">
+          <span className="w-fit uppercase text-gray-400 gap-1 flex items-center  break-keep">
             Made With {emoji("❤")}{" "}
             <a
               className="text-ourWhite"
