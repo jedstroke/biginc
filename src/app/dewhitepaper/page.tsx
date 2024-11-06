@@ -220,6 +220,7 @@ export default function Page() {
                 to the team on contract creation, this clause could change if the team (and the artist) repurchases their shares making shareholders' pool reduced.
                 If a shareholder wants to utilize the master license or sync license, they will pay a fee, but it will be a discounted fee per share (like their share percentage slash the original master/sync fee). Failure to comply with these terms may result in the seizure of the shareholder’s shares, along with potential legal action for intellectual property abuse.
               </li>
+              
             </ul>
             We are aiming to raise {" "}
             <strong className="poppins-extrabold">
