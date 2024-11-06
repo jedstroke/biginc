@@ -217,12 +217,8 @@ export default function Page() {
                 <strong className="poppins-extrabold">
                   <span>18%</span>
                 </strong>{" "}
-                to the team on contract creation, this clause could change if the team (and the artist) buys their own shares back making shareholders' pool reduced.
-                And if a shareholder wants to utilize the master license, or sync license will pay a fee, but will be a discounted fee per their share (like their share percentage slash the original master/sync fee).
-                Failure to
-                comply with these terms may result in the seizure of the
-                shareholder’s shares, along with potential legal action for
-                intellectual property abuse.
+                to the team on contract creation, this clause could change if the team (and the artist) repurchases their shares making shareholders' pool reduced.
+                If a shareholder wants to utilize the master license or sync license, they will pay a fee, but it will be a discounted fee per share (like their share percentage slash the original master/sync fee). Failure to comply with these terms may result in the seizure of the shareholder’s shares, along with potential legal action for intellectual property abuse.
               </li>
             </ul>
             We are aiming to raise {" "}
