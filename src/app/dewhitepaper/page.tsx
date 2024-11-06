@@ -136,7 +136,7 @@ export default function Page() {
           <em className="poppins-regular-italic">
             It’s so apropos when a smart contract function name carries meaning,
             like{" "}
-            <code className="inline-block not-italic font-light p-1 rounded bg-slate-600">
+            <code className="inline-block font-light text-sm rounded bg-slate-600">
               mintShare
             </code>
             .
@@ -164,7 +164,7 @@ export default function Page() {
             token sale.{" "}
             <strong className="poppins-extrabold">
               When you sign the{" "}
-              <code className="inline-block p-1 font-light rounded bg-slate-600">
+              <code className="inline-block text-sm font-light rounded bg-slate-600">
                 mintShare
               </code>{" "}
               function on the smart contract
@@ -373,7 +373,7 @@ export default function Page() {
           </CardContent>
         </Card>
       </section>
-      <p className="w-full text-center poppins-regular text-[#A8AEB9] my-3 p-5"><strong className="poppins-extrabold text-[#A8AEB9]">Disclosure:</strong> Not Financial Advice (NFA). But we are a community-driven project, and we are building this as a template to setup a proven rebel label on-chain with our integrity & reputation which we hold dearly to this becomes a successful story. We are not selling shares to the public, but to our community, and anyone who is willing to join our community. Feel free to join our community and be part of this trailblazing journey.</p>
+      <p className="w-full text-center poppins-regular text-sm text-[#A8AEB9] my-3 p-5"><strong className="poppins-extrabold text-[#A8AEB9]">Disclosure:</strong> Not Financial Advice (NFA). But we are a community-driven project, and we are building this as a template to setup a proven rebel label on-chain with our integrity & reputation which we hold dearly to this becomes a successful story. We are not selling shares to the public, but to our community, and anyone who is willing to join our community. Feel free to join our community and be part of this trailblazing journey.</p>
     </main>
   );
 }

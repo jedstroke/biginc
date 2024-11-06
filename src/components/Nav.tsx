@@ -65,6 +65,7 @@ const Nav: React.FC = () => {
           </svg>
           <li className="cursor-pointer">
             <Link
+              onClick={()=> setMenu(false)}
               className={`${pathname == "/" ? "underline" : ""}`}
               href={"/"}
             >
@@ -145,6 +146,7 @@ const Nav: React.FC = () => {
           </li>
           <li className="cursor-pointer">
             <Link
+              onClick={()=> setMenu(false)}
               className={`${pathname == "/dewhitepaper" ? "underline" : ""}`}
               href={"/dewhitepaper"}
             >

@@ -38,11 +38,15 @@ const Karaoke: React.FC<KaraokeProps> = ({
       line: "They both down to pleasure me, right orally",
     },
     {
-      startTime: 19,
+      startTime: 18.5,
+      endTime: 19.7,
+      line: "When the psychology meets biology"
+    },
+    {
+      startTime: 20,
       endTime: 23,
       line: "I'm the bipolar write columns, write poems write puns"
     },
-
     {
       startTime: 23,
       endTime: 27,
