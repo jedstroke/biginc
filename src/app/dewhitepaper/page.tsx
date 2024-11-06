@@ -136,7 +136,7 @@ export default function Page() {
           <em className="poppins-regular-italic">
             It’s so apropos when a smart contract function name carries meaning,
             like{" "}
-            <code className="inline-block font-light p-1 rounded bg-slate-600">
+            <code className="inline-block font-light text-sm rounded bg-slate-600">
               mintShare
             </code>
             .
@@ -164,7 +164,7 @@ export default function Page() {
             token sale.{" "}
             <strong className="poppins-extrabold">
               When you sign the{" "}
-              <code className="inline-block p-1 font-light rounded bg-slate-600">
+              <code className="inline-block text-sm font-light rounded bg-slate-600">
                 mintShare
               </code>{" "}
               function on the smart contract
