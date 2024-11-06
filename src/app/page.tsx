@@ -22,8 +22,8 @@ export default function Page() {
         <h2 className="text-2xl mb-20 base:max-md:text-xl tracking-wide font-lighten font-bold">
           <span className="text-gray-400">*</span>SOME INSTA VISTA
         </h2>
-        <div className="flex w-full  my-10 mfer">
-          <div className="flex max-sm:w-full flex-col">
+        <div className="flex tab:flex-row flex-col gap-5 justify-between w-full mb-5 md:mb-40">
+          <div className="flex max-sm:w-full flex-1 flex-col">
             <div className="w-[100%] min-[630px]:w-[600px] flex justify-center items-center relative">
               <img
                 className="h-[400px] blur-[2px] brightness-50 w-full object-cover"
@@ -57,9 +57,7 @@ export default function Page() {
               </a>
             </div>
           </div>
-        </div>
-        <div className="flex w-full relative top-[-240px] my-10 mfer">
-          <div className="flex max-sm:w-full flex-col">
+          <div className="flex max-sm:w-full flex-1 relative top-0 md:top-32 flex-col">
             <div className="w-[100%] min-[630px]:w-[600px] flex justify-center items-center relative">
               <img
                 className="h-[400px] blur-[2px] brightness-50 w-full object-cover"
@@ -92,8 +90,8 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <div className="flex w-full my-10 mfer">
-          <div className="flex max-sm:w-full flex-col">
+        <div className="flex tab:flex-row flex-col gap-5 justify-between w-full">
+          <div className="flex relative bottom-0 md:bottom-32 max-sm:w-full flex-col">
             <div className="w-[100%] min-[630px]:w-[600px] flex justify-center items-center relative">
               <img
                 className="h-[400px] blur-[2px] brightness-50 w-full object-cover"
@@ -125,8 +123,6 @@ export default function Page() {
               </a>
             </div>
           </div>
-        </div>
-        <div className="flex w-full relative top-[-240px] my-10 mfer">
           <div className="flex max-sm:w-full flex-col">
             <div className="w-[100%] min-[630px]:w-[600px] flex justify-center items-center relative">
               <img
@@ -162,7 +158,7 @@ export default function Page() {
         </div>
       </section>
       <section className="base:max-md:px-3 text-ourWhite px-10 h-fit w-full">
-        <div className="w-full relative top-[-140px]">
+        <div className="w-full relative mb-5">
           <h2 className="bg-gradient-to-b from-gray-400 to-white bg-clip-text text-transparent font-bolden base:max-md:text-[45px] text-8xl base:max-md:tracking-[-.05em] tracking-tightest base:max-md:[word-spacing:-7px] text-center">
             EBRUVWIYO ABEKE
           </h2>
@@ -200,7 +196,7 @@ export default function Page() {
         </div>
         <div className="max-sm:flex-col flex py-1 max-sm:items-center max-sm:gap-5 text-gray-400 text-sm justify-between w-full">
           <span className="uppercase">
-            <span className="relative top-[-2.5px]">©</span> {new Date().getFullYear()} Big Inc.
+            <span className="relative top-[-1px]">©</span> {new Date().getFullYear()} Big Inc.
           </span>
           <span className="w-fit uppercase text-gray-400 gap-1 flex items-center  break-keep">
             Made With {emoji("❤")}{" "}
