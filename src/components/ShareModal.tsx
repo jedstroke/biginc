@@ -169,7 +169,7 @@ export function ShareModal({ totalShare, yourShare, crypto, onCryptoChange }: Sh
                     })
                 }
             }} className='poppins-regular border-white border-solid border'>Own A Share</Button>}
-            <div className='w-full text-center poppins-regular text-gray-400'>(connect your wallet to see your shares)</div>
+            <div className='w-full text-sm text-center poppins-regular text-gray-400'>(connect to see your shares)</div>
             <w3m-button />
             <DialogContent className="sm:max-w-[425px] custom-scrollbar overflow-y-auto h-[80vh]">
                 <DialogHeader>
