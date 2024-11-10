@@ -340,7 +340,7 @@ export default function Page() {
             </li>
           </ul>
           <p className="poppins-regular  my-3">
-            Shares revenue will be distributed quarterly after every 3-month in stablecoins (USDC/USDT on the Polygon chain) to the mapped addresses of our shareholders.
+            Shares revenue will be distributed annually in stablecoins (USDC/USDT on the Polygon chain) to the mapped addresses of our shareholders.
           </p>
         </div>
         <h2 className="text-2xl font-bolden py-4">Outro</h2>
