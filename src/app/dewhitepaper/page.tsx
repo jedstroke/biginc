@@ -99,7 +99,7 @@ export default function Page() {
                 <div className="relative top-[8px]">
                   <dd className="poppins-regular">
                     : a detailed description with reports from{" "}
-                    <strong className="poppins-extrabold">deBlockchain</strong>{" "}
+                    <strong className="poppins-extrabold">deBlockchain through a smart contract</strong>{" "}
                     of the project targeted at{" "}
                     <strong className="poppins-extrabold">deGens</strong>,{" "}
                     <strong className="poppins-extrabold">deFans</strong>, and <strong className="poppins-extrabold">deInvestors</strong>
