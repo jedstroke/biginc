@@ -107,7 +107,7 @@ export default function Page() {
                   <dd className="poppins-regular pl-3">
                     For example: I signed the whale&apos;s share of Big Inc&apos;s
                     <strong className="poppins-extrabold"> deWhitepaper</strong>
-                    —I am bullish on what he cooking, he's an amazing lyricist.
+                    —I ain't feeling no FUD, I am fugging bullish on what he cooking, he got sick bars {emoji("🔥")}. He could be the next big thing in the music industry.
                   </dd>
                 </div>
               </div>
