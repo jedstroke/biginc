@@ -2,6 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import emoji from "react-easy-emoji";
 import { ShareChart } from "@components/ShareChart";
 import { ShareModal } from "@components/ShareModal";
 import { Card, CardHeader, CardTitle, CardContent } from "@components/ui/card";
