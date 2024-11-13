@@ -105,16 +105,9 @@ export default function Page() {
                     <strong className="poppins-extrabold">deFans</strong>, and <strong className="poppins-extrabold">deInvestors</strong>
                   </dd>
                   <dd className="poppins-regular pl-3">
-                    For example: I signed the whale&apos;s share of Inc&apos;s
+                    For example: I signed the whale&apos;s share of Big Inc&apos;s
                     <strong className="poppins-extrabold"> deWhitepaper</strong>
-                    —I am bullish on what he cooking.
-                  </dd>
-                  <dd className="flex flex-col lg:flex-row h-fit pl-3 items-center mt-3 gap-3">
-                    <span className="poppins-regular">
-                      ...connect your wallet if you wanna own a share, or
-                      monitor your share
-                    </span>
-                    <w3m-button />
+                    —I am bullish on what he cooking, he's an amazing lyricist.
                   </dd>
                 </div>
               </div>
