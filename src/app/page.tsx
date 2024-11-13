@@ -199,7 +199,7 @@ export default function Page() {
             <span className="relative top-[-1px]">©</span> {new Date().getFullYear()} Big Inc.
           </span>
           <span className="w-fit uppercase text-gray-400 gap-1 flex items-center  break-keep">
-            Made With {emoji("❤")}{" "}
+            Made With <span className="relative top-[-1.5px]">{emoji("❤")}</span>{" "}
             <a
               className="text-ourWhite"
               href="https://www.jedshock.com"
