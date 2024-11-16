@@ -19,6 +19,7 @@ export default function Page() {
   const [yourShare, setYourShare] = useState(0)
   const [availableShare, setAvailableShare] = useState(0)
   const [soldShare, setSoldShare] = useState(0)
+  const [teamShare, setTeamShare] = useState(0)
   const [crypto, setCrypto] = useState("usdt")
   const getShares = {
     abi,
@@ -38,9 +39,15 @@ export default function Page() {
     functionName: 'sharesSold',
     args: [],
   }
+  const teamShares = {
+    abi,
+    address: contractAddress as `0x${string}`,
+    functionName: 'getShares',
+    args: ['0xdB7295B36236D766200D5382F26170b8DB7bf9Df'],
+  }
 
   const {data, isSuccess} = useReadContracts({
-    contracts: [getShares, availableShares, soldShares],
+    contracts: [getShares, availableShares, soldShares, teamShares],
   });
 
   useEffect(() => {
@@ -49,6 +56,7 @@ export default function Page() {
         setYourShare(Number(formatUnits(data?.[0]?.result as bigint, 6)));
         setAvailableShare(Number(formatUnits(data?.[1]?.result as bigint, 6)));
         setSoldShare(Number(formatUnits(data?.[2]?.result as bigint, 6)));
+        setTeamShare(Number(formatUnits(data?.[3]?.result as bigint, 6)));
       }else{
         setYourShare(0);
         setAvailableShare(0);
@@ -177,8 +185,8 @@ export default function Page() {
           <div className="poppins-regular">
             Shareholders own
             <strong className="poppins-extrabold">
-              <span> 82%</span> of the total revenue pool</strong>{" "}
-            on contract creation which is based on the artist's performance while the team (and the artist) <strong className="poppins-extrabold">own <span>18%</span> of shares on contract creation.</strong> This means:
+              <span> {availableShare}%</span> of the total revenue pool</strong>{" "}
+            on contract creation which is based on the artist's performance while the team (and the artist) <strong className="poppins-extrabold">own <span>{teamShare}%</span> of shares on contract creation.</strong> This means:
             <ul className="list-disc px-8 py-4">
               <li className="poppins-regular my-4">
                 <strong className="poppins-extrabold">
@@ -211,11 +219,11 @@ export default function Page() {
                 </strong>{" "}
                 Shareholders will own a piece of the artist’s master & sync license fee per their shares—
                 <strong className="poppins-extrabold">
-                  <span>82%</span>
+                  <span>{availableShare}%</span>
                 </strong>{" "}
                 goes to shareholders,{" "}
                 <strong className="poppins-extrabold">
-                  <span>18%</span>
+                  <span>{teamShare}%</span>
                 </strong>{" "}
                 to the team on contract creation, this clause could change if the team (and the artist) repurchases their shares making shareholders' pool reduced.
                 If a shareholder wants to utilize the master license or sync license, they will pay a fee, but it will be a discounted fee per share (like their share percentage slash the original master/sync fee). Failure to comply with these terms may result in the seizure of the shareholder’s shares, along with potential legal action for intellectual property abuse.
