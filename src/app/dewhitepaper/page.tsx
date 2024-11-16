@@ -113,9 +113,7 @@ export default function Page() {
                     <strong className="poppins-extrabold">deFans</strong>, and <strong className="poppins-extrabold">deInvestors</strong>
                   </dd>
                   <dd className="poppins-regular pl-3">
-                    For example: I signed the whale&apos;s share of Big Inc&apos;s
-                    <strong className="poppins-extrabold"> deWhitepaper</strong>
-                    —I ain't feeling no FUD, I am fugging bullish on what he cooking, he got sick bars 🔥. He could be the next big thing in the music industry.
+                    For example: I just snagged the whale's share of Big Inc's <strong className="poppins-extrabold">deWhitepaper</strong>—no FUD here, I'm straight-up bullish on this. The dude's got <i className="italic poppins-light-italic">sick</i> bars 🔥—he might just be the next big thing in the music game.
                   </dd>
                 </div>
               </div>
