@@ -172,7 +172,7 @@ export default function Page() {
             <strong className="poppins-extrabold">deFans</strong>, and{" "}
             <strong className="poppins-extrabold">deInvestors</strong>. Through
             smart contracts, you’re not just backing an artist; you’re buying a
-            tangible stake in their success. Welcome to the new way to fund
+            tangible stake in their success, and most importantly letting the artist define their record terms in their favor through a smart contract. Welcome to the new way to fund
             emerging talent—on-chain and fully transparent.
           </p>
         </div>
