@@ -201,8 +201,8 @@ export default function Page() {
           <div className="poppins-regular">
             Shareholders own
             <strong className="poppins-extrabold">
-              <span> {availableShare}%</span> of the total revenue pool</strong>{" "}
-            on contract creation which is based on the artist's performance while the team (and the artist) <strong className="poppins-extrabold">own <span>{teamShare}%</span> of shares on contract creation.</strong> This means:
+              <span> 82%</span> of the total revenue pool</strong>{" "}
+            on contract creation which is based on the artist's performance while the team (and the artist) <strong className="poppins-extrabold">own <span>18%</span> of shares on contract creation which is all subject to change if the artist decides to my its shares back.</strong> This means:
             <ul className="list-disc px-8 py-4">
               <li className="poppins-regular my-4">
                 <strong className="poppins-extrabold">
@@ -241,7 +241,6 @@ export default function Page() {
                 <strong className="poppins-extrabold">
                   <span>{teamShare}%</span>
                 </strong>{" "}
-                to the team on contract creation, this clause could change if the team (and the artist) repurchases their shares making shareholders' pool reduced.
                 If a shareholder wants to utilize the master license or sync license, they will pay a fee, but it will be a discounted fee per share (like their share percentage slash the original master/sync fee). Failure to comply with these terms may result in the seizure of the shareholder’s shares, along with potential legal action for intellectual property abuse.
               </li>
               
