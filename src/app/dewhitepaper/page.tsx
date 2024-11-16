@@ -2,16 +2,25 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import emoji from "react-easy-emoji";
+import { readContracts, http, createConfig } from '@wagmi/core'
+import { polygon } from '@wagmi/core/chains'
 import { ShareChart } from "@components/ShareChart";
 import { ShareModal } from "@components/ShareModal";
 import { Card, CardHeader, CardTitle, CardContent } from "@components/ui/card";
 import { useAppKitAccount } from "@reown/appkit/react";
 import { useEffect, useState } from "react";
 import { useReadContracts } from 'wagmi'
+import { AbiEvent, AbiFunction } from 'viem';
 import { abi } from '../../abi/BigIncGenesis.json';
 import { contractAddress } from "@lib/wallet/config";
 import { formatUnits } from "viem";
+
+const config = createConfig({
+  chains: [polygon],
+  transports: {
+    [polygon.id]: http()
+  }
+});
 
 
 export default function Page() {
@@ -33,40 +42,56 @@ export default function Page() {
     address: contractAddress as `0x${string}`,
     functionName: 'availableShares',
     args: [],
-  }
+  } 
   const soldShares = {
     abi,
     address: contractAddress as `0x${string}`,
     functionName: 'sharesSold',
     args: [],
-  }
+  } 
   const teamShares = {
     abi,
     address: contractAddress as `0x${string}`,
     functionName: 'getShares',
     args: ['0xdB7295B36236D766200D5382F26170b8DB7bf9Df'],
-  }
+  } 
 
   const {data, isSuccess} = useReadContracts({
     contracts: [getShares, availableShares, soldShares, teamShares],
   });
 
+  const fallbackOnchainFetch = async () => {
+    try {
+      const data = await readContracts(config, {
+        // @ts-ignore
+        contracts: [availableShares, soldShares, teamShares]
+      });
+      setAvailableShare(Number(formatUnits(data?.[0]?.result as bigint, 6)));
+      setSoldShare(Number(formatUnits(data?.[1]?.result as bigint, 6)));
+      setTeamShare(Number(formatUnits(data?.[2]?.result as bigint, 6)));
+    } catch (error) {
+      console.log(error, "Fallback error");
+    }
+  } 
+
+  useEffect(() => {
+    fallbackOnchainFetch();
+  }, []);
+
   useEffect(() => {
     try {
-      if (isSuccess){
+      if (isConnected){
         setYourShare(Number(formatUnits(data?.[0]?.result as bigint, 6)));
         setAvailableShare(Number(formatUnits(data?.[1]?.result as bigint, 6)));
         setSoldShare(Number(formatUnits(data?.[2]?.result as bigint, 6)));
         setTeamShare(Number(formatUnits(data?.[3]?.result as bigint, 6)));
       }else{
-        setYourShare(0);
-        setAvailableShare(0);
-        setSoldShare(0);
+        fallbackOnchainFetch();
       }
     } catch (error) {
       console.log(error)
     }
-  }, [isSuccess]);
+  }, [isConnected, isSuccess]);
   return (
     <main className="w-full h-full max-w-screen-2xl mx-auto">
       <header className="py-2 h-fit base:max-md:px-3 px-10 items-center border-b border-gray-600 max-md:py-4 flex relative top-0 w-full">
