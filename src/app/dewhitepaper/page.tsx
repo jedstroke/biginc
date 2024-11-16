@@ -109,7 +109,7 @@ export default function Page() {
                   <dd className="poppins-regular">
                     : a detailed description with reports from{" "}
                     <strong className="poppins-extrabold">deBlockchain{" "}</strong>through the project's smart contract targeted at
-                    <strong className="poppins-extrabold">deGens</strong>,{" "}
+                    <strong className="poppins-extrabold"> deGens</strong>,{" "}
                     <strong className="poppins-extrabold">deFans</strong>, and <strong className="poppins-extrabold">deInvestors</strong>
                   </dd>
                   <dd className="poppins-regular pl-3">
