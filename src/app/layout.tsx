@@ -7,7 +7,7 @@ import AppKitProvider from "@context/AppKitProvider";
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: "Big Inc",
+  title: "Big Inc - Artist Onchain",
   description: "Welcome to my body of work",
 };
 
@@ -50,12 +50,12 @@ export default function RootLayout({
         />
         <meta
           name="description"
-          content="Big Inc is a multidisciplinary creative from Delta State, Nigeria, known for his exceptional talent in songwriting, singing, rapping, and art curation."
+          content="Big Inc is a multidisciplinary creative artist onchain."
         />
         <meta property="og:title" content="Big Inc" />
         <meta
           property="og:description"
-          content="Big Inc is a multidisciplinary creative from Delta State, Nigeria, known for his exceptional talent in songwriting, singing, rapping, and art curation."
+          content="Big Inc is a multidisciplinary creative artist onchain."
         />
         <meta
           property="og:image"

@@ -35,7 +35,7 @@ const Nav: React.FC = () => {
           <rect y="18" width="24" height="2" fill="white" />
         </svg>
         <ul
-          className={`ml-auto z-50 bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-[8px] lg:bg-transparent lg:backdrop-blur-none absolute lg:relative lg:flex-row flex-col text-ourWhite lg:p-0 base:max-md:px-3 px-10 py-20 flex gap-4 w-full lg:w-auto top-0 left-0 ${
+          className={`ml-auto z-50 bg-gray-800 backdrop-filter backdrop-blur-[8px] lg:bg-transparent lg:backdrop-blur-none absolute lg:relative lg:flex-row flex-col text-ourWhite lg:p-0 base:max-md:px-3 px-10 py-20 flex gap-4 w-full lg:w-auto top-0 left-0 ${
             menu ? "flex" : "hidden"
           } lg:flex`}
         >

@@ -2,6 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import emoji from "react-easy-emoji";
 import { ShareChart } from "@components/ShareChart";
 import { ShareModal } from "@components/ShareModal";
 import { Card, CardHeader, CardTitle, CardContent } from "@components/ui/card";
@@ -107,22 +108,14 @@ export default function Page() {
                 <div className="relative top-[8px]">
                   <dd className="poppins-regular">
                     : a detailed description with reports from{" "}
-                    <strong className="poppins-extrabold">deBlockchain</strong>{" "}
-                    of the project targeted at{" "}
+                    <strong className="poppins-extrabold">deBlockchain{" "}</strong>through the project's smart contract targeted at
                     <strong className="poppins-extrabold">deGens</strong>,{" "}
                     <strong className="poppins-extrabold">deFans</strong>, and <strong className="poppins-extrabold">deInvestors</strong>
                   </dd>
                   <dd className="poppins-regular pl-3">
-                    For example: I signed the whale&apos;s share of Inc&apos;s
+                    For example: I signed the whale&apos;s share of Big Inc&apos;s
                     <strong className="poppins-extrabold"> deWhitepaper</strong>
-                    —I am bullish on what he cooking.
-                  </dd>
-                  <dd className="flex flex-col lg:flex-row h-fit pl-3 items-center mt-3 gap-3">
-                    <span className="poppins-regular">
-                      ...connect your wallet if you wanna own a share, or
-                      monitor your share
-                    </span>
-                    <w3m-button />
+                    —I ain't feeling no FUD, I am fugging bullish on what he cooking, he got sick bars 🔥. He could be the next big thing in the music industry.
                   </dd>
                 </div>
               </div>
@@ -345,7 +338,7 @@ export default function Page() {
             </li>
           </ul>
           <p className="poppins-regular  my-3">
-            Shares revenue will be distributed quarterly after every 3-month in stablecoins (USDC/USDT on the Polygon chain) to the mapped addresses of our shareholders.
+            Shares revenue will be distributed annually in stablecoins (USDC/USDT on the Polygon chain) to the mapped addresses of our shareholders.
           </p>
         </div>
         <h2 className="text-2xl font-bolden py-4">Outro</h2>
@@ -378,7 +371,7 @@ export default function Page() {
           </CardContent>
         </Card>
       </section>
-      <p className="w-full text-center poppins-regular text-sm text-[#A8AEB9] my-3 p-5"><strong className="poppins-extrabold text-[#A8AEB9]">Disclosure:</strong> Not Financial Advice (NFA). But we are a community-driven project, and we are building this as a template to setup a proven rebel label on-chain with our integrity & reputation which we hold dearly to this becomes a successful story. We are not selling shares to the public, but to our community, and anyone who is willing to join our community. Feel free to join our community and be part of this trailblazing journey.</p>
+      <p className="w-full text-center poppins-regular text-sm text-[#A8AEB9] my-3 p-5"><strong className="poppins-extrabold text-[#A8AEB9]">Disclosure:</strong> Not Financial Advice (NFA). But we are a community-driven project, and we are building this as a template to setup a proven rebel label on-chain with our integrity & reputation which we hold dearly to this becoming a successful story. We are not selling shares to the public, but to our community, and anyone who is willing to join our community. Feel free to join our community and be part of this trailblazing journey.</p>
     </main>
   );
 }

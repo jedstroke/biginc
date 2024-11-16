@@ -172,7 +172,7 @@ const Karaoke: React.FC<KaraokeProps> = ({
     {
       startTime: 107,
       endTime: 111,
-      line: "♫♪♫",
+      line: "...",
     }
   ],
 }) => {
