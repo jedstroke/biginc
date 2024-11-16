@@ -239,7 +239,7 @@ export default function Page() {
                 </strong>{" "}
                 goes to shareholders,{" "}
                 <strong className="poppins-extrabold">
-                  <span>{teamShare}%</span>
+                  <span>{teamShare}% to team</span>
                 </strong>{" "}
                 If a shareholder wants to utilize the master license or sync license, they will pay a fee, but it will be a discounted fee per share (like their share percentage slash the original master/sync fee). Failure to comply with these terms may result in the seizure of the shareholder’s shares, along with potential legal action for intellectual property abuse.
               </li>
