@@ -20,6 +20,7 @@ export default function Page() {
   const [yourShare, setYourShare] = useState(0)
   const [availableShare, setAvailableShare] = useState(0)
   const [soldShare, setSoldShare] = useState(0)
+  const [teamShare, setTeamShare] = useState(0)
   const [crypto, setCrypto] = useState("usdt")
   const getShares = {
     abi,
@@ -39,9 +40,15 @@ export default function Page() {
     functionName: 'sharesSold',
     args: [],
   }
+  const teamShares = {
+    abi,
+    address: contractAddress as `0x${string}`,
+    functionName: 'getShares',
+    args: ['0xdB7295B36236D766200D5382F26170b8DB7bf9Df'],
+  }
 
   const {data, isSuccess} = useReadContracts({
-    contracts: [getShares, availableShares, soldShares],
+    contracts: [getShares, availableShares, soldShares, teamShares],
   });
 
   useEffect(() => {
@@ -50,6 +57,7 @@ export default function Page() {
         setYourShare(Number(formatUnits(data?.[0]?.result as bigint, 6)));
         setAvailableShare(Number(formatUnits(data?.[1]?.result as bigint, 6)));
         setSoldShare(Number(formatUnits(data?.[2]?.result as bigint, 6)));
+        setTeamShare(Number(formatUnits(data?.[3]?.result as bigint, 6)));
       }else{
         setYourShare(0);
         setAvailableShare(0);
@@ -101,13 +109,11 @@ export default function Page() {
                   <dd className="poppins-regular">
                     : a detailed description with reports from{" "}
                     <strong className="poppins-extrabold">deBlockchain{" "}</strong>through the project's smart contract targeted at
-                    <strong className="poppins-extrabold">deGens</strong>,{" "}
+                    <strong className="poppins-extrabold"> deGens</strong>,{" "}
                     <strong className="poppins-extrabold">deFans</strong>, and <strong className="poppins-extrabold">deInvestors</strong>
                   </dd>
                   <dd className="poppins-regular pl-3">
-                    For example: I signed the whale&apos;s share of Big Inc&apos;s
-                    <strong className="poppins-extrabold"> deWhitepaper</strong>
-                    —I ain't feeling no FUD, I am fugging bullish on what he cooking, he got sick bars 🔥. He could be the next big thing in the music industry.
+                    For example: I just snagged the whale's share of Big Inc's <strong className="poppins-extrabold">deWhitepaper</strong>—no FUD here, I'm straight-up bullish on this. The dude's got <i className="italic poppins-light-italic">sick</i> bars 🔥—he might just be the next big thing in the music game.
                   </dd>
                 </div>
               </div>
@@ -170,8 +176,8 @@ export default function Page() {
           <div className="poppins-regular">
             Shareholders own
             <strong className="poppins-extrabold">
-              <span> 82%</span> of the total revenue pool</strong>{" "}
-            on contract creation which is based on the artist's performance while the team (and the artist) <strong className="poppins-extrabold">own <span>18%</span> of shares on contract creation.</strong> This means:
+              <span> {availableShare}%</span> of the total revenue pool</strong>{" "}
+            on contract creation which is based on the artist's performance while the team (and the artist) <strong className="poppins-extrabold">own <span>{teamShare}%</span> of shares on contract creation.</strong> This means:
             <ul className="list-disc px-8 py-4">
               <li className="poppins-regular my-4">
                 <strong className="poppins-extrabold">
@@ -204,19 +210,16 @@ export default function Page() {
                 </strong>{" "}
                 Shareholders will own a piece of the artist’s master & sync license fee per their shares—
                 <strong className="poppins-extrabold">
-                  <span>82%</span>
+                  <span>{availableShare}%</span>
                 </strong>{" "}
                 goes to shareholders,{" "}
                 <strong className="poppins-extrabold">
-                  <span>18%</span>
+                  <span>{teamShare}%</span>
                 </strong>{" "}
-                to the team on contract creation, this clause could change if the team (and the artist) buys their own shares back making shareholders' pool reduced.
-                And if a shareholder wants to utilize the master license, or sync license will pay a fee, but will be a discounted fee per their share (like their share percentage slash the original master/sync fee).
-                Failure to
-                comply with these terms may result in the seizure of the
-                shareholder’s shares, along with potential legal action for
-                intellectual property abuse.
+                to the team on contract creation, this clause could change if the team (and the artist) repurchases their shares making shareholders' pool reduced.
+                If a shareholder wants to utilize the master license or sync license, they will pay a fee, but it will be a discounted fee per share (like their share percentage slash the original master/sync fee). Failure to comply with these terms may result in the seizure of the shareholder’s shares, along with potential legal action for intellectual property abuse.
               </li>
+              
             </ul>
             We are aiming to raise {" "}
             <strong className="poppins-extrabold">
