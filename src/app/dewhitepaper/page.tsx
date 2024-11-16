@@ -53,7 +53,7 @@ export default function Page() {
 
   useEffect(() => {
     try {
-      if(isConnected){
+      if (isSuccess){
         setYourShare(Number(formatUnits(data?.[0]?.result as bigint, 6)));
         setAvailableShare(Number(formatUnits(data?.[1]?.result as bigint, 6)));
         setSoldShare(Number(formatUnits(data?.[2]?.result as bigint, 6)));
@@ -66,7 +66,7 @@ export default function Page() {
     } catch (error) {
       console.log(error)
     }
-  }, [isSuccess, isConnected]);
+  }, [isSuccess]);
   return (
     <main className="w-full h-full max-w-screen-2xl mx-auto">
       <header className="py-2 h-fit base:max-md:px-3 px-10 items-center border-b border-gray-600 max-md:py-4 flex relative top-0 w-full">
