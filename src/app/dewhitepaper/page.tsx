@@ -10,10 +10,10 @@ import { Card, CardHeader, CardTitle, CardContent } from "@components/ui/card";
 import { useAppKitAccount } from "@reown/appkit/react";
 import { useEffect, useState } from "react";
 import { useReadContracts } from 'wagmi'
-import { AbiEvent, AbiFunction } from 'viem';
 import { abi } from '../../abi/BigIncGenesis.json';
 import { contractAddress } from "@lib/wallet/config";
 import { formatUnits } from "viem";
+import Head from "next/head";
 
 const config = createConfig({
   chains: [polygon],
@@ -93,6 +93,18 @@ export default function Page() {
     }
   }, [isConnected, isSuccess]);
   return (
+    <>
+    <Head>
+        <title>Big Inc's deWhitepaper: Empowering deGens, deFans, & deArtists</title>
+        <meta name="description" content="In this decentralized music revolution, we hope to flip the traditional record label model on its head—putting control in the hands of deGens, deFans, and deInvestors. Through smart contracts, you’re not just backing an artist; you’re buying a tangible stake in their success, and most importantly letting the artist define their record terms in their favor through a smart contract. Welcome to the new way to fund emerging talent—on-chain and fully transparent." />
+        <meta name="keywords" content="web3 music, record label onchain, deWhitepaper, decentralized music, blockchain, smart contracts, deGens, deFans, artists, revenue sharing" />
+        <meta name="author" content="Jedshock" />
+        <meta property="og:title" content="Big Inc's deWhitepaper: Empowering deGens, deFans, & deArtists" />
+        <meta property="og:description" content="In this decentralized music revolution, we hope to flip the traditional record label model on its head—putting control in the hands of deGens, deFans, and deInvestors. Through smart contracts, you’re not just backing an artist; you’re buying a tangible stake in their success, and most importantly letting the artist define their record terms in their favor through a smart contract. Welcome to the new way to fund emerging talent—on-chain and fully transparent." />
+        <meta property="og:image" content="https://bigincognito.vercel.app/assets/img/big_inc_alt.jpg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.bigincognito.com/dewhitepaper" />
+    </Head>
     <main className="w-full h-full max-w-screen-2xl mx-auto">
       <header className="py-2 h-fit base:max-md:px-3 px-10 items-center border-b border-gray-600 max-md:py-4 flex relative top-0 w-full">
         <div className="w-fit">
@@ -418,5 +430,6 @@ export default function Page() {
       </section>
       <p className="w-full text-center poppins-regular text-sm text-[#A8AEB9] my-3 p-5"><strong className="poppins-extrabold text-[#A8AEB9]">Disclosure:</strong> Not Financial Advice (NFA). But we are a community-driven project, and we are building this as a template to setup a proven rebel label on-chain with our integrity & reputation which we hold dearly to this becoming a successful story. We are not selling shares to the public, but to our community, and anyone who is willing to join our community. Feel free to join our community and be part of this trailblazing journey.</p>
     </main>
+    </>
   );
 }
