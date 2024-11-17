@@ -215,8 +215,8 @@ export default function Page() {
                 </strong>{" "}
                 goes to shareholders,{" "}
                 <strong className="poppins-extrabold">
-                  <span>{teamShare}%</span> to the team (and artist).
-                </strong>
+                  <span>{teamShare}%</span> 
+                </strong> to the team (and artist).
               </li>
               <li className="poppins-regular my-4">
                 <strong className="poppins-extrabold">Merchandise:</strong> Sales from tour t-shirts, vinyl, and other related
@@ -226,8 +226,8 @@ export default function Page() {
                 </strong>{" "}
                 goes to shareholders,{" "}
                 <strong className="poppins-extrabold">
-                  <span>{teamShare}%</span> to the team (and artist).
-                </strong>
+                  <span>{teamShare}%</span> 
+                </strong> to the team (and artist).
               </li>
               <li className="poppins-regular my-4">
                 <strong className="poppins-extrabold">
@@ -239,8 +239,8 @@ export default function Page() {
                 </strong>{" "}
                 goes to shareholders,{" "}
                 <strong className="poppins-extrabold">
-                  <span>{teamShare}%</span> to the team (and artist).
-                </strong>
+                  <span>{teamShare}%</span> 
+                </strong> to the team (and artist).
               </li>
               <li className="poppins-regular my-4">
                 <strong className="poppins-extrabold">Tour revenue:</strong>{" "}
@@ -250,8 +250,8 @@ export default function Page() {
                 </strong>{" "}
                 goes to shareholders,{" "}
                 <strong className="poppins-extrabold">
-                  <span>{teamShare}%</span> to the team (and artist).
-                </strong>
+                  <span>{teamShare}%</span>
+                </strong> to the team (and artist).
               </li>
               <li className="poppins-regular my-4">
                 <strong className="poppins-extrabold">
@@ -263,8 +263,8 @@ export default function Page() {
                 </strong>{" "}
                 goes to shareholders,{" "}
                 <strong className="poppins-extrabold">
-                  <span>{teamShare}%</span> to the team (and artist).
-                </strong>{" "}
+                  <span>{teamShare}%</span> 
+                </strong>{" "}to the team (and artist).
                 And if a shareholder wants to utilize the master license or sync license, they will pay a fee, but it will be a discounted fee per share (like their share percentage slash the original master/sync fee), if they fail to comply with these terms it may result in the seizure of the shareholder’s shares, along with potential legal action for intellectual property abuse.
               </li>
             </ul>
