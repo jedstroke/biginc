@@ -202,7 +202,7 @@ export default function Page() {
             Shareholders own
             <strong className="poppins-extrabold">
               <span> 82%</span> of the total revenue pool</strong>{" "}
-            on contract creation which is based on the artist's performance while the team (and the artist) <strong className="poppins-extrabold">own <span>18%</span> of shares on contract creation which is all subject to change if the artist decides to buy its shares. After this initial percentages the rest are the current percentages coming from the Blockchain.</strong> This means:
+            on contract creation which is based on the artist's performance while the team (and the artist) <strong className="poppins-extrabold">own <span>18%</span> of shares on contract creation which is all subject to change if the artist decides to buy its shares. After these initial percentages the rest are the current percentages coming from the Blockchain.</strong> This means:
             <ul className="list-disc px-8 py-4">
               <li className="poppins-regular my-4">
                 <strong className="poppins-extrabold">
