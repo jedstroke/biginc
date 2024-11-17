@@ -202,32 +202,56 @@ export default function Page() {
             Shareholders own
             <strong className="poppins-extrabold">
               <span> 82%</span> of the total revenue pool</strong>{" "}
-            on contract creation which is based on the artist's performance while the team (and the artist) <strong className="poppins-extrabold">own <span>18%</span> of shares on contract creation which is all subject to change if the artist decides to buy its shares. After these initial percentages the rest are the current percentages coming from the Blockchain.</strong> This means:
-            <ul className="list-disc px-8 py-4">
+            on contract creation which is based on the artist's performance while the team (and the artist) <strong className="poppins-extrabold">own <span>18%</span></strong> of shares on contract creation which is all subject to change if the artist decides to buy shares. After these initial percentages the rest are the current percentages coming from the <strong className="poppins-extrabold" >deBlockchain</strong>.
+              <p className='poppins-regular mt-4'>This means:</p>
+            <ul className="list-disc px-8 pb-4">
               <li className="poppins-regular my-4">
                 <strong className="poppins-extrabold">
                   Streaming revenue:
                 </strong>{" "}
                 Every stream the artist earns from the album will flow back to
-                the revenue pool.
+                the revenue pool <strong className="poppins-extrabold">
+                  <span>{availableShare}%</span>
+                </strong>{" "}
+                goes to shareholders,{" "}
+                <strong className="poppins-extrabold">
+                  <span>{teamShare}%</span> to the team (and artist).
+                </strong>
               </li>
               <li className="poppins-regular my-4">
-                <strong className="poppins-extrabold">Merchandise:</strong> A
-                percentage of sales from tour t-shirts, vinyl, and other related
+                <strong className="poppins-extrabold">Merchandise:</strong> Sales from tour t-shirts, vinyl, and other related
                 merchandise will flow back to
-                the revenue pool.
+                the revenue pool <strong className="poppins-extrabold">
+                  <span>{availableShare}%</span>
+                </strong>{" "}
+                goes to shareholders,{" "}
+                <strong className="poppins-extrabold">
+                  <span>{teamShare}%</span> to the team (and artist).
+                </strong>
               </li>
               <li className="poppins-regular my-4">
                 <strong className="poppins-extrabold">
                   Promotions & endorsements:
                 </strong>{" "}
                 If the artist secures brand deals or partnerships during this
-                album's lifecycle, shareholders will benefit.
+                album's lifecycle, shareholders will benefit from the revenue pool <strong className="poppins-extrabold">
+                  <span>{availableShare}%</span>
+                </strong>{" "}
+                goes to shareholders,{" "}
+                <strong className="poppins-extrabold">
+                  <span>{teamShare}%</span> to the team (and artist).
+                </strong>
               </li>
               <li className="poppins-regular my-4">
                 <strong className="poppins-extrabold">Tour revenue:</strong>{" "}
                 Every ticket sold for performances during this album's lifecycle will
-                contribute to the pool.
+                contribute to the pool <strong className="poppins-extrabold">
+                  <span>{availableShare}%</span>
+                </strong>{" "}
+                goes to shareholders,{" "}
+                <strong className="poppins-extrabold">
+                  <span>{teamShare}%</span> to the team (and artist).
+                </strong>
               </li>
               <li className="poppins-regular my-4">
                 <strong className="poppins-extrabold">
@@ -239,11 +263,10 @@ export default function Page() {
                 </strong>{" "}
                 goes to shareholders,{" "}
                 <strong className="poppins-extrabold">
-                  <span>{teamShare}% to team.</span>
+                  <span>{teamShare}%</span> to the team (and artist).
                 </strong>{" "}
-                If a shareholder wants to utilize the master license or sync license, they will pay a fee, but it will be a discounted fee per share (like their share percentage slash the original master/sync fee). Failure to comply with these terms may result in the seizure of the shareholder’s shares, along with potential legal action for intellectual property abuse.
+                And if a shareholder wants to utilize the master license or sync license, they will pay a fee, but it will be a discounted fee per share (like their share percentage slash the original master/sync fee), if they fail to comply with these terms it may result in the seizure of the shareholder’s shares, along with potential legal action for intellectual property abuse.
               </li>
-              
             </ul>
             We are aiming to raise {" "}
             <strong className="poppins-extrabold">

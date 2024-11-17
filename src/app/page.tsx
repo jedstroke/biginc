@@ -163,13 +163,7 @@ export default function Page() {
             EBRUVWIYO ABEKE
           </h2>
           <p className="max-w-[1000px] w-fit mx-auto font-thin poppins-light text-center py-2">
-            Big Inc is a multidisciplinary creative from Delta State, Nigeria, known for his exceptional talent in songwriting, singing, rapping, and art curation. A highly skilled and technically gifted rapper, he brings intricate wordplay and thought-provoking lyrics to his music.
-
-            Big Inc’s artistry is shaped by a diverse range of influences, from the nuanced lyricism of MF Doom, Black Thought, and Jay Electronica to the introspective depth of Ab-Soul. His sonic palette is further enriched by the alt-rap, rock, and genre-blending sounds of Twenty One Pilots, Linkin Park, The Plot In You, and Bring Me The Horizon, alongside the electronic and folk influences of Empire Of The Sun, and Bon Iver.
-
-            In his spare time, he explores complex narratives in his lyrics, touching on themes from spirituality to love and human nature. His creative journey draws on an academic background where he balanced mathematics, literature, and music, eventually earning a bachelor’s degree in mathematics from Delta State University, Abraka.
-
-            With his upcoming projects, Big Inc is excited to experiment across genres, starting with indie folk fusion and branching into rock and hip hop—remaining true to his roots yet unafraid to explore the edges. With such a unique artistic approach and range of influences, Big Inc is poised to make a powerful impact and emerge as one of Nigeria’s most innovative voices in music.
+            The poetry of Big Inc is an ever burning love affair between magic and the mundaneness of everyday life, weaving an ever shifting tapestry of sound from the fabric of his imagination, his artistry tilts towards rapping with intricate rhyme schemes yet he treats music as a boundless form of expression with influences within and beyond the circumference of hip-hop like Jay Electronica, Black Thought, Bon Iver, Twenty One Pilots, Linkin Park, Empire Of The Sun, Shabaka, Isik Kural, Armand Hammer. He carves his unique style and trailblaze in his artistic trajectory.
           </p>
         </div>
       </section>
