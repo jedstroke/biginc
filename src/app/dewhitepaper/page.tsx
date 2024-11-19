@@ -10,10 +10,10 @@ import { Card, CardHeader, CardTitle, CardContent } from "@components/ui/card";
 import { useAppKitAccount } from "@reown/appkit/react";
 import { useEffect, useState } from "react";
 import { useReadContracts } from 'wagmi'
+import type { Metadata } from "next";
 import { abi } from '../../abi/BigIncGenesis.json';
 import { contractAddress } from "@lib/wallet/config";
 import { formatUnits } from "viem";
-import Head from "next/head";
 
 const config = createConfig({
   chains: [polygon],
@@ -22,6 +22,19 @@ const config = createConfig({
   }
 });
 
+
+export const metadata: Metadata = {
+  title: "Big Inc's deWhitepaper: Empowering deGens, deFans, & deArtists",
+  description: "In this decentralized music revolution, we hope to flip the traditional record label model on its head—putting control in the hands of deGens, deFans, and deInvestors. Through smart contracts, you’re not just backing an artist; you’re buying a tangible stake in their success, and most importantly letting the artist define their record terms in their favor through a smart contract. Welcome to the new way to fund emerging talent—on-chain and fully transparent.",
+  keywords:"web3 music, record label onchain, deWhitepaper, decentralized music, blockchain, smart contracts, deGens, deFans, artists, revenue sharing",
+  authors:[{name:"Jedshock", url:"https://www.jedshock.com"}],
+  openGraph: {
+    images: [{ url: "https://bigincognito.vercel.app/assets/img/big_inc_alt.jpg" }],
+    description: "In this decentralized music revolution, we hope to flip the traditional record label model on its head—putting control in the hands of deGens, deFans, and deInvestors. Through smart contracts, you’re not just backing an artist; you’re buying a tangible stake in their success, and most importantly letting the artist define their record terms in their favor through a smart contract. Welcome to the new way to fund emerging talent—on-chain and fully transparent.",
+    title: "Big Inc's deWhitepaper: Empowering deGens, deFans, & deArtists",
+    url: "https://www.bigincognito.com/dewhitepaper"
+  }
+};
 
 export default function Page() {
   const totalShare = 100
@@ -94,17 +107,6 @@ export default function Page() {
   }, [isConnected, isSuccess]);
   return (
     <>
-    <Head>
-        <title>Big Inc's deWhitepaper: Empowering deGens, deFans, & deArtists</title>
-        <meta name="description" content="In this decentralized music revolution, we hope to flip the traditional record label model on its head—putting control in the hands of deGens, deFans, and deInvestors. Through smart contracts, you’re not just backing an artist; you’re buying a tangible stake in their success, and most importantly letting the artist define their record terms in their favor through a smart contract. Welcome to the new way to fund emerging talent—on-chain and fully transparent." />
-        <meta name="keywords" content="web3 music, record label onchain, deWhitepaper, decentralized music, blockchain, smart contracts, deGens, deFans, artists, revenue sharing" />
-        <meta name="author" content="Jedshock" />
-        <meta property="og:title" content="Big Inc's deWhitepaper: Empowering deGens, deFans, & deArtists" />
-        <meta property="og:description" content="In this decentralized music revolution, we hope to flip the traditional record label model on its head—putting control in the hands of deGens, deFans, and deInvestors. Through smart contracts, you’re not just backing an artist; you’re buying a tangible stake in their success, and most importantly letting the artist define their record terms in their favor through a smart contract. Welcome to the new way to fund emerging talent—on-chain and fully transparent." />
-        <meta property="og:image" content="https://bigincognito.vercel.app/assets/img/big_inc_alt.jpg" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.bigincognito.com/dewhitepaper" />
-    </Head>
     <main className="w-full h-full max-w-screen-2xl mx-auto">
       <header className="py-2 h-fit base:max-md:px-3 px-10 items-center border-b border-gray-600 max-md:py-4 flex relative top-0 w-full">
         <div className="w-fit">

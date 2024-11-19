@@ -9,6 +9,12 @@ import { Toaster } from "@/components/ui/toaster";
 export const metadata: Metadata = {
   title: "Big Inc - Artist Onchain",
   description: "Welcome to my body of work",
+  openGraph: {
+    images: [{ url: "https://bigincognito.vercel.app/assets/img/inc-the-god.jpg"}],
+    description: "Big Inc is a multidisciplinary creative artist onchain.",
+    title: "Big Inc - Artist Onchain",
+    url: "https://www.bigincognito.com"
+  }
 };
 
 export default function RootLayout({
@@ -33,12 +39,6 @@ export default function RootLayout({
         />
         <link
           rel="preload"
-          href="/assets/music/light_years-trimmed.mp3"
-          as="audio"
-          type="audio/mpeg"
-        />
-        <link
-          rel="preload"
           href="/assets/music/light_years.mp3"
           as="audio"
           type="audio/mpeg"
@@ -48,21 +48,6 @@ export default function RootLayout({
           href="/assets/img/big_inc_icon.png"
           type="image/png"
         />
-        <meta
-          name="description"
-          content="Big Inc is a multidisciplinary creative artist onchain."
-        />
-        <meta property="og:title" content="Big Inc" />
-        <meta
-          property="og:description"
-          content="Big Inc is a multidisciplinary creative artist onchain."
-        />
-        <meta
-          property="og:image"
-          content="https://bigincognito.vercel.app/assets/img/inc-the-god.jpg"
-        />
-        <meta property="og:url" content="https://bigincognito.com" />
-        <meta property="og:type" content="website" />
       </head>
       <body className="bg-darkBg bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] w-vw flex flex-col h-dvh overflow-hidden relative">
         <Nav />
