@@ -1,7 +1,7 @@
+'use client';
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
-// use client
 import { readContracts, http, createConfig } from '@wagmi/core'
 import { polygon } from '@wagmi/core/chains'
 import { ShareChart } from "@components/ShareChart";
