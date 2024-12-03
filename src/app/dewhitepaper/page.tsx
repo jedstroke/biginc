@@ -135,7 +135,7 @@ export default function Page() {
                     : a detailed description with reports from{" "}
                     <strong className="poppins-extrabold">deBlockchain{" "}</strong>through the project's smart contract targeted at
                     <strong className="poppins-extrabold"> deGens</strong>,{" "}
-                    <strong className="poppins-extrabold">deFans</strong>, and <strong className="poppins-extrabold">deInvestors</strong>
+                    <strong className="poppins-extrabold">deFans</strong>, and <strong className="poppins-extrabold">deInvestors</strong> from a decentralized whitepaper.
                   </dd>
                   <dd className="poppins-regular pl-3">
                     For example: I just snagged the whale's share of Big Inc's <strong className="poppins-extrabold">deWhitepaper</strong>—no FUD here, I'm straight-up bullish on this. The dude's got <i className="italic poppins-light-italic">sick</i> bars 🔥—he might just be the next big thing in the music game.
