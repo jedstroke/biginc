@@ -383,12 +383,12 @@ export default function Page() {
             </li>
           </ul>
           <p className="poppins-regular  my-3">
-            Shares revenue will be distributed annually in stablecoins (USDC/USDT on the Polygon chain) to the mapped addresses of our shareholders.
+              Shares revenue will be distributed annually, or earlier in stablecoins (USDC/USDT on the Polygon chain) to the mapped addresses of our shareholders. This is the CA: <a className='text-blue-400' href="https://polygonscan.com/address/0x34Da66269431a3DaDE50DA17F88F4b8F1F2Ed771" target="_blank" rel="noopener noreferrer"><code className='poppins-regular'>0x34Da66269431a3DaDE50DA17F88F4b8F1F2Ed771</code></a>, and here's the body of work & a testament of talent: <a className='poppins-regular text-blue-400' href="https://www.instagram.com/big_inc_/" target="_blank" rel="noopener noreferrer">Big Inc's Instagram</a>. And any further questions you can <a className='poppins-regular text-blue-400' href="https://x.com/jedshock" target="_blank" rel="noopener noreferrer">DM MGMT on X</a>
           </p>
         </div>
         <h2 className="text-2xl font-bolden py-4">Outro</h2>
         <div className="w-full lg:w-[880px]">
-          <p className="poppins-regular  my-3">
+          <p className="poppins-regular my-3">
             We want to show the world what we've been listening to; the
             countless artists who have shaped our psyche with their
             soul-throbbing sounds. Now, we’re giving it back—through the
