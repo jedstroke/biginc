@@ -15,7 +15,7 @@ const Karaoke: React.FC<KaraokeProps> = ({
     {
       startTime: 4,
       endTime: 7,
-      line: "I pray brain splatter that my mind be on display like an art gallery",
+      line: "I pray my brain splatter that my mind be on display like an art gallery",
     },
     {
       startTime: 8,
@@ -44,11 +44,11 @@ const Karaoke: React.FC<KaraokeProps> = ({
     },
     {
       startTime: 20,
-      endTime: 23,
+      endTime: 23.5,
       line: "I'm the bipolar write columns, write poems write puns"
     },
     {
-      startTime: 23,
+      startTime: 24,
       endTime: 27,
       line: "Look, regurgitating my statements I'm coming thru like an amen"
     },
