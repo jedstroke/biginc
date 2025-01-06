@@ -8,7 +8,7 @@ import { polygon } from '@wagmi/core/chains'
 import { ShareChart } from "@components/ShareChart";
 import { ShareModal } from "@components/ShareModal";
 import { Card, CardHeader, CardTitle, CardContent } from "@components/ui/card";
-import { useAppKitAccount } from "@reown/appkit/react";
+import { useAppKitAccount, useDisconnect } from "@reown/appkit/react";
 import { useEffect, useState } from "react";
 import { useReadContracts } from 'wagmi'
 import { abi } from '../../abi/BigIncGenesis.json';
@@ -28,6 +28,7 @@ const config = createConfig({
 
 export default function Page() {
   const { open, close } = useAppKit()
+  const { disconnect } = useDisconnect()
   const totalShare = 100
   const { address, isConnected } = useAppKitAccount();
   const [yourShare, setYourShare] = useState(0)
@@ -79,7 +80,7 @@ export default function Page() {
   }
 
   async function donate() {
-    let amount: string | null = prompt("How much POL would you like to donate? \n(number only)");
+    let amount: string | null = prompt("How much POL would you like to donate? \n(number)");
     console.log(amount);
     try {
       if (amount !== null && Number(amount) > 0) {
@@ -106,7 +107,12 @@ export default function Page() {
         });
         open();
       } else if (error.message.includes("connection.connector.getChainId")){
+        await disconnect();
         open();
+      } else if (error.message.includes("User rejected the request.")){
+        toast({
+          title: "Looks like might be testing 🤓",
+        });
       }else{
         toast({
           variant: "destructive",
