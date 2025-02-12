@@ -432,17 +432,9 @@ export default function Page() {
                 with no hidden fees or undisclosed deductions.
               </li>
             </ul>
-            <p className="poppins-regular text-justify my-3">
+            <p className="poppins-regular my-3">
               Shares revenue will be distributed annually, or earlier in stablecoins (USDC/USDT/POL/USDC.e/DAI on the Polygon chain) to the mapped addresses of our shareholders. This is the CA: <a className='text-blue-400' href="https://polygonscan.com/address/0x34Da66269431a3DaDE50DA17F88F4b8F1F2Ed771" target="_blank" rel="noopener noreferrer"><code className='poppins-regular'>0x34Da66269431a3DaDE50DA17F88F4b8F1F2Ed771</code></a>, and here's the body of work & a testament of talent: <a className='poppins-regular text-blue-400' href="https://www.instagram.com/big_inc_/" target="_blank" rel="noopener noreferrer">Big Inc's Instagram</a>. And any further questions you can <a className='poppins-regular text-blue-400' href="https://x.com/jedshock" target="_blank" rel="noopener noreferrer">DM MGMT on X</a>
             </p>
-            <p className="poppins-regular text-justify my-3"></p>
-          </div>
-          <h2 className="text-2xl font-bolden py-4">You Could Donate POL But No Stakes</h2>
-          <div className="w-full lg:w-[880px]">
-            <p className="poppins-regular my-3">
-              We wrote a donate function in the contract in hopes that Polygon Labs, or any kind ser/mer who wants to put some thrust to our launchpad.
-            </p>
-            <Button onClick={donate} className='flex gap-2 bg-[#5043DF] items-center hover:text-black text-white' variant={"secondary"}><span id='#donate'>Donate Some $POL</span><img src='/assets/img/polygon-matic-logo.svg' className='w-[20px] h-auto' /></Button>
           </div>
           <h2 className="text-2xl font-bolden py-4">Outro</h2>
           <div className="w-full lg:w-[880px]">
