@@ -226,33 +226,33 @@ mod BigIncGenesis {
     }
 
     // Modifiers implementation
-    impl ModifierHelpers of ModifierHelpersTrait<ContractState> {
-        fn assert_only_owner(self: @ContractState) {
-            let caller = get_caller_address();
-            let owner = self.owner.read();
-            assert!(caller == owner, "Caller is not the owner");
-        }
+    // impl ModifierHelpers of ModifierHelpersTrait<ContractState> {
+    //     fn assert_only_owner(self: @ContractState) {
+    //         let caller = get_caller_address();
+    //         let owner = self.owner.read();
+    //         assert!(caller == owner, "Caller is not the owner");
+    //     }
 
-        fn assert_not_paused(self: @ContractState) {
-            let paused = self.paused.read();
-            assert!(!paused, "Contract is paused");
-        }
+    //     fn assert_not_paused(self: @ContractState) {
+    //         let paused = self.paused.read();
+    //         assert!(!paused, "Contract is paused");
+    //     }
 
-        fn assert_valid_token(self: @ContractState, token_address: ContractAddress) {
-            let usdt = self.usdt_address.read();
-            let usdc = self.usdc_address.read();
-            assert!(token_address == usdt || token_address == usdc, "Invalid token address");
-        }
+    //     fn assert_valid_token(self: @ContractState, token_address: ContractAddress) {
+    //         let usdt = self.usdt_address.read();
+    //         let usdc = self.usdc_address.read();
+    //         assert!(token_address == usdt || token_address == usdc, "Invalid token address");
+    //     }
 
-        fn assert_nonreentrant_before(ref self: ContractState) {
-            let entered = self.entered.read();
-            assert!(!entered, "ReentrancyGuard: reentrant call");
-            self.entered.write(true);
-        }
+    //     fn assert_nonreentrant_before(ref self: ContractState) {
+    //         let entered = self.entered.read();
+    //         assert!(!entered, "ReentrancyGuard: reentrant call");
+    //         self.entered.write(true);
+    //     }
 
-        fn assert_nonreentrant_after(ref self: ContractState) {
-            self.entered.write(false);
-        }
-    }
+    //     fn assert_nonreentrant_after(ref self: ContractState) {
+    //         self.entered.write(false);
+    //     }
+    // }
 }
 
