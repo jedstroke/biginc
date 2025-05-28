@@ -45,11 +45,12 @@ mod BigIncGenesis {
         Map, StorageMapReadAccess, StorageMapWriteAccess, StoragePointerWriteAccess,
         StoragePointerReadAccess,
     };
-    
-    use openzeppelin::access::ownable::OwnableComponent;
-    use openzeppelin::security::pausable::PausableComponent;
-    use openzeppelin::security::reentrancyguard::ReentrancyGuardComponent;
-    use openzeppelin::token::erc20::interface::{IERC20Dispatcher, IERC20DispatcherTrait};
+    use openzeppelin_access::ownable::OwnableComponent;
+
+    // use openzeppelin::access::ownable::OwnableComponent;
+    // use openzeppelin::security::pausable::PausableComponent;
+    // use openzeppelin::security::reentrancyguard::ReentrancyGuardComponent;
+    // use openzeppelin::token::erc20::interface::{IERC20Dispatcher, IERC20DispatcherTrait};
 
 
     component!(path: OwnableComponent, storage: ownable, event: OwnableEvent);
@@ -59,6 +60,9 @@ mod BigIncGenesis {
     #[abi(embed_v0)]
     impl OwnableImpl = OwnableComponent::OwnableImpl<ContractState>;
     impl OwnableInternalImpl = OwnableComponent::InternalImpl<ContractState>;
+
+    #[abi(embed_v0)]
+    impl OwnableTwoStepMixinImpl = OwnableComponent::OwnableTwoStepMixinImpl<ContractState>;
 
     #[abi(embed_v0)]
     impl PausableImpl = PausableComponent::PausableImpl<ContractState>;
