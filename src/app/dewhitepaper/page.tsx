@@ -4,7 +4,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import { readContracts, http, createConfig, writeContract } from '@wagmi/core'
-import { polygon } from '@wagmi/core/chains'
+import { polygon } from 'wagmi/chains'
 import { ShareChart } from "@components/ShareChart";
 import { ShareModal } from "@components/ShareModal";
 import { Card, CardHeader, CardTitle, CardContent } from "@components/ui/card";
@@ -17,6 +17,9 @@ import { formatUnits, parseUnits } from "viem";
 import { Button } from '@components/ui/button';
 import { toast } from '@components/ui/use-toast';
 import { useAppKit } from '@reown/appkit/react'
+import { WalletProvider } from '@context/WalletContext';
+import ConnectButton from '@components/ConnectButton';
+import Link from 'next/link';
 
 const config = createConfig({
   chains: [polygon],
@@ -99,21 +102,21 @@ export default function Page() {
       }
     } catch (error: any) {
       console.log(error.message);
-      if (error.message.includes("Connector not connected.")){
+      if (error.message.includes("Connector not connected.")) {
         toast({
           variant: "destructive",
           title: "Connect your wallet",
           description: "Your wallet isn't connected",
         });
         open();
-      } else if (error.message.includes("connection.connector.getChainId")){
+      } else if (error.message.includes("connection.connector.getChainId")) {
         await disconnect();
         open();
-      } else if (error.message.includes("User rejected the request.")){
+      } else if (error.message.includes("User rejected the request.")) {
         toast({
           title: "Looks like might be testing 🤓",
         });
-      }else{
+      } else {
         toast({
           variant: "destructive",
           title: "Something went wrong",
@@ -433,7 +436,7 @@ export default function Page() {
               </li>
             </ul>
             <p className="poppins-regular my-3">
-              Shares revenue will be distributed annually, or earlier in stablecoins (USDC/USDT/POL/USDC.e/DAI on the Polygon chain) to the mapped addresses of our shareholders. This is the CA: <a className='text-blue-400' href="https://polygonscan.com/address/0x34Da66269431a3DaDE50DA17F88F4b8F1F2Ed771" target="_blank" rel="noopener noreferrer"><code className='poppins-regular'>0x34Da66269431a3DaDE50DA17F88F4b8F1F2Ed771</code></a>, and here's the body of work & a testament of talent: <a className='poppins-regular text-blue-400' href="https://www.instagram.com/big_inc_/" target="_blank" rel="noopener noreferrer">Big Inc's Instagram</a>. And any further questions you can <a className='poppins-regular text-blue-400' href="https://x.com/jedshock" target="_blank" rel="noopener noreferrer">DM MGMT on X</a>
+              Shares revenue will be distributed annually, or earlier in stablecoins (USDC/USDT/STRK on the Starknet chain) to the mapped addresses of our shareholders. Here's the body of work & a testament of talent: <a className='poppins-regular text-blue-400' href="https://www.instagram.com/big_inc_/" target="_blank" rel="noopener noreferrer">Big Inc's Instagram</a>. And any further questions you can <a className='poppins-regular text-blue-400' href="https://x.com/jedshock" target="_blank" rel="noopener noreferrer">DM MGMT on X</a>
             </p>
           </div>
           <h2 className="text-2xl font-bolden py-4">Outro</h2>
@@ -462,11 +465,20 @@ export default function Page() {
             </p>
             <CardContent className="flex flex-col items-center gap-4">
               <ShareChart yourShare={yourShare} soldShare={soldShare} availableShare={availableShare} />
-              <ShareModal crypto={crypto} totalShare={totalShare} yourShare={yourShare} onCryptoChange={setCrypto} />
+              <ConnectButton />
             </CardContent>
           </Card>
         </section>
         <p className="w-full text-center poppins-regular text-sm text-[#A8AEB9] my-3 p-5"><strong className="poppins-extrabold text-[#A8AEB9]">Disclosure:</strong> Not Financial Advice (NFA). But we are a community-driven project, and we are building this as a template to setup a proven rebel label on-chain with our integrity & reputation which we hold dearly to this becoming a successful story. We are not selling shares to the public, but to our community, and anyone who is willing to join our community. Feel free to join our community and be part of this trailblazing journey.</p>
+        
+        {/* Expectations Link */}
+        <div className="w-full text-center py-8">
+          <Link href="/dewhitepaper/expectations">
+            <Button variant="outline" className="text-ourWhite px-10 rounded-none bg-[transparent] border-gray-600 font-extralight font-lighten tracking-widest hover:border-gray-500 transition-all duration-200 ease-in-out hover:scale-[1.02]">
+              🗳️ View Community Expectations
+            </Button>
+          </Link>
+        </div>
       </main>
     </>
   );
