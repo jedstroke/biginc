@@ -122,8 +122,8 @@ export default function ExpectationsPage() {
             Community Expectations
           </h1>
           <p className="text-gray-300 poppins-regular max-w-3xl">
-            Review and vote on milestones attached to treasury withdrawal requests. Each expectation represents a commitment 
-            that shareholders can approve or reject based on its merit and alignment with the project's goals.
+            Review and vote on milestones attached to treasury withdrawal requests. Each expectation represents a commitment
+            that shareholders can approve or reject based on its merit and alignment with the project&#39;s goals.
           </p>
         </div>
 
